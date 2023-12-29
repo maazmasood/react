@@ -12,6 +12,8 @@ import Link from "next/link";
   ];
 
 const YourComponent = () => {
+
+  const router = useRouter(); 
   // Manually entered data for three boxes
   const products = [
     {
@@ -83,6 +85,7 @@ const YourComponent = () => {
   const handleProductClick = (productId) => {
     // Handle product click logic
     console.log(`Product clicked with ID: ${productId}`);
+     router.push(`/product?id=${productId}`);
   };
 
 
@@ -103,7 +106,7 @@ const YourComponent = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="product-box bg-white rounded-lg overflow-hidden shadow-xl relative"
+              className="product-box bg-white rounded-lg overflow-hidden shadow-xl relative cursor-pointer"
               onClick={() => handleProductClick(product.id)}
             >
               <div
