@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "image": ["g2.webp", "g3.webp", "g4.webp"],
+    "category": "Starter",
+    "brand": "Panasonic",
+    "room": "1 room",
+    "wifi": "Yes",
+    "price": 99.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor."
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "image": ["g4.webp", "g3.webp"],
+    "category": "Exklusiv",
+    "brand": "LG",
+    "room": "2 room",
+    "wifi": "Yes",
+    "price": 199.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor."
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "image": ["g3.webp", "g4.webp"],
+    "category": "Premium",
+    "brand": "Samsung",
+    "room": "3 room",
+    "wifi": "Yes",
+    "price": 399.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor."
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "image": ["g2.webp", "g3.webp"],
+    "category": "Exklusiv",
+    "brand": "Dikin",
+    "room": "4 room",
+    "wifi": "No",
+    "price": 499.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor."
+  }
+
+]
