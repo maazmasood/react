@@ -4,9 +4,78 @@ import Link from "next/link";
 
 
 
-
+	};
 
   const faqData = [
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "image": ["g2.webp", "g3.webp", "g4.webp"],
+    "category": "Starter",
+    "brand": "Panasonic",
+    "room": "1 room",
+    "wifi": "Yes",
+    "price": 99.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor.",
+	  feature: [
+  "Energieeffizienz A+++",
+  "besonders energieeffizient",
+  "modernes Design",
+  "kühlen, heizen und entfeuchten",
+  "flüsterleiser Betrieb",
+  "keine Zugerscheinungen",
+  "reine Luft",
+  "smart vernetzbar",
+  "hygienisch",
+],
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "image": ["g4.webp", "g3.webp"],
+    "category": "Exklusiv",
+    "brand": "LG",
+    "room": "2 room",
+    "wifi": "Yes",
+    "price": 199.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor.",
+	  feature: [
+  "Energieeffizienz A+++",
+  "besonders energieeffizient",
+  "modernes Design",
+  "kühlen, heizen und entfeuchten",
+  "flüsterleiser Betrieb",
+  "keine Zugerscheinungen",
+  "reine Luft",
+  "smart vernetzbar",
+  "hygienisch",
+],
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "image": ["g3.webp", "g4.webp"],
+    "category": "Premium",
+    "brand": "Samsung",
+    "room": "3 room",
+    "wifi": "Yes",
+    "price": 399.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor.",
+	  feature: [
+  "Energieeffizienz A+++",
+  "besonders energieeffizient",
+  "modernes Design",
+  "kühlen, heizen und entfeuchten",
+  "flüsterleiser Betrieb",
+  "keine Zugerscheinungen",
+  "reine Luft",
+  "smart vernetzbar",
+  "hygienisch",
+],
+  },
+	  
+  ];
     { index: 1, question: 'What is Lorem Ipsum?', answer: 'Lorem Ipsum is...' },
     // Add more FAQ entries as needed
   ];
@@ -15,72 +84,7 @@ const YourComponent = () => {
 
   const router = useRouter(); 
   // Manually entered data for three boxes
-  const products = [
-    {
-      id: 1,
-      category: 'Category 1',
-      name: 'Product 1',
-      price: 299.9999,
-      image: '/g2.webp',
-      room: 'Living Room',
-      wifi: 'Free WiFi',
-      brand: 'Brand A',
-      feature: [
-  "Energieeffizienz A+++",
-  "besonders energieeffizient",
-  "modernes Design",
-  "kühlen, heizen und entfeuchten",
-  "flüsterleiser Betrieb",
-  "keine Zugerscheinungen",
-  "reine Luft",
-  "smart vernetzbar",
-  "hygienisch",
-],
-    },
-    {
-      id: 2,
-      category: 'Category 2',
-      name: 'Product 2',
-      price: 399.9999,
-      image: '/g3.webp',
-      room: 'Bedroom',
-      wifi: 'Paid WiFi',
-      brand: 'Brand B',
-      feature: [
-  "Energieeffizienz A+++",
-  "besonders energieeffizient",
-  "modernes Design",
-  "kühlen, heizen und entfeuchten",
-  "flüsterleiser Betrieb",
-  "keine Zugerscheinungen",
-  "reine Luft",
-  "smart vernetzbar",
-  "hygienisch",
-],
-    },
-    {
-      id: 3,
-      category: 'Category 3',
-      name: 'Product 3',
-      price: 499.9999,
-      image: '/g4.webp',
-      room: 'Kitchen',
-      wifi: 'No WiFi',
-      brand: 'Brand C',
-      feature: [
-  "Energieeffizienz A+++",
-  "besonders energieeffizient",
-  "modernes Design",
-  "kühlen, heizen und entfeuchten",
-  "flüsterleiser Betrieb",
-  "keine Zugerscheinungen",
-  "reine Luft",
-  "smart vernetzbar",
-  "hygienisch",
-],
-    },
-
-  ];
+  const products = 
 
   const handleProductClick = (productId) => {
     // Handle product click logic
