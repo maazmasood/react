@@ -236,7 +236,6 @@ const ProductSearch = ({ onProductClick }) => {
                     viewBox="0 0 24 24"
                   ></svg>
                   <p>
-                    Wifi :
                     <span className="pl-1 text-gray-900 font-bold">
                       {product.wifi}
                     </span>{" "}
@@ -282,28 +281,6 @@ const ProductSearch = ({ onProductClick }) => {
   );
 };
 
-const products = [
-  {
-    id: 1,
-    name: "Product 1",
-    image: "g2.webp",
-    category: "Starter",
-    brand: "Panasonic",
-    room: "1 room",
-    wifi: "Yes",
-    price: 99.99,
-  },
-  {
-    id: 2,
-    name: "Product 2",
-    image: "g3.webp",
-    category: "Exklusiv",
-    brand: "LG",
-    room: "2 room",
-    wifi: "No",
-    price: 99.99,
-  },
-];
 
 const ProductSearchPage = () => {
   const handleProductClick = (productId) => {
