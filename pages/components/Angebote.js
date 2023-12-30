@@ -4,86 +4,59 @@ import Link from "next/link";
 
 
 
-
-
 const YourComponent = () => {
 
-  const router = useRouter(); 
+  const router = useRouter();
   // Manually entered data for three boxes
   const products = 	 [
-{
-id: 1,
-category: 'Premium',
-name: 'Panasonic Etherea - Stilvoll mit herausragenden Funktionen',
-price: 2199.99,
-image: '/g2.webp',
-room: 'Living Room',
-wifi: 'Incl. WiFi',
-brand: 'Panasonic',
-feature: [
-"Energieeffizienz A+++",
-"besonders energieeffizient",
-"modernes design",
-"Kühlen, Heizen und Entfeuchten",
-"flüster Betrieb",
-"nanoe™ X Filtertechnologi",
-"Fortgeschrittene Inverter-Technologie",
-],
-},
-{
-id: 2,
-category: 'Starter',
-name: 'Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern',
-price: 1599.99,
-image: '/g3.webp',
-room: 'Living Room',
-wifi: 'Optional WiFi',
-brand: 'Mitsubishi',
-feature: [
-"Energieeffizienz bis A++",
-"energieeffizient",
-"modernes design",
-"Kühlen, Heizen und Entfeuchten",
-"Flüsterleiser Kompressor",
-"Auto Restart Funktion",
-"Fortgeschrittene Inverter-Technologie",
-],
-},
-{
-id: 3,
-category: 'Normal',
-name: 'LG Standard Plus - Modernes Design',
-price: 1599.99,
-image: '/g2.webp',
-room: 'Living Room',
-wifi: 'inkl. WiFi',
-brand: 'LG',
-feature: [
-"Energieeffizienz bis A++",
-"energieeffizient",
-"modernes design",
-"Kühlen, Heizen und Entfeuchten",
-"Flüsterleiser Kompressor",
-"R32 Kältemittel",
-"Fortgeschrittene Inverter-Technologie",
-],
-},
-];
+      {
+        "id": 1,
+        "name": "Panasonic Etherea - Stilvoll mit herausragenden Funktionen",
+        "image": ["g2.webp", "g3.webp"],
+        "category": "Premium",
+        "brand": "Panasonic",
+        "room": "1 room",
+        "wifi": "inkl. WiFi",
+        "price": 2199,
+        "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+      },
+      {
+        "id": 2,
+        "name": "Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern",
+        "image": ["g4.webp", "g3.webp"],
+        "category": "Exklusiv",
+        "brand": "Mitsubishi",
+        "room": "2 room",
+        "wifi": "Optional WiFi",
+        "price": 1599.99,
+        "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
 
+      },
+      {
+        "id": 3,
+        "name": "LG Standard Plus - Modernes Design",
+        "image": ["g3.webp", "g4.webp"],
+        "category": "Normal",
+        "brand": "LG",
+        "room": "3 room",
+        "wifi": "inkl. WiFi",
+        "price": 1799,
+        "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+
+      }
+
+];
   const handleProductClick = (productId) => {
     // Handle product click logic
     console.log(`Product clicked with ID: ${productId}`);
      router.push(`/product?id=${productId}`);
   };
 
-
-
-
   return (
     <div>
     <div className="p-10 m-10">
       <div className="header-container">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl creative-header-text " id="section-id">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl creative-header-text" id="section-id">
           Unsere Sale-Artikel
         </h1>
         <br />
@@ -105,25 +78,26 @@ feature: [
               <div
                 className="bg-cover bg-center h-40 p-4" // Adjusted height to make it smaller
                 style={{
-                  backgroundImage: `url(${product.image})`,
+                  backgroundImage: `url(${
+                    Array.isArray(product.image)
+                      ? product.image[0]
+                      : product.image
+                  })`,
                 }}
               ></div>
               <div className="p-4">
                 <p className="text-gray-700 font-bold">{product.name}</p>
-                <p className="text-1xl text-right text-gray-900">                 
-                  <span className="text-md text-right text-theme">{`$${(product.price)}`}</span>
+                <p className="text-1xl text-right text-gray-900">
+                  <span className="text-md text-right text-theme">{`$${(product.price).toFixed(2)}`}</span>
                 </p>
               </div>
+
+
               <div className="flex p-4 border-t border-gray-300 text-gray-700">
                 <div className="flex-1 inline-flex items-center">
                   <p>
                     <span className="font-bold">Features: </span><br />
-                    {product.feature.map((feature, index) => (
-                      <span key={index} className="text-gray-600 text-sm">
-                        {feature}
-                        {index !== product.feature.length - 1 && <br />}
-                      </span>
-                    ))}
+                   <span dangerouslySetInnerHTML={{ __html: product.description }} ></span>
                   </p>
                 </div>
               </div>
@@ -251,7 +225,6 @@ feature: [
           <br />
 
 
-
           <div className="header-container">
             <h1 className="text-4xl md:text-5xl lg:text-6xl creative-header-text">
             Kundenerfahrungen
@@ -262,6 +235,8 @@ feature: [
           <br />
 
           </div>
+
+
 
 <div className="comments">
   <figure class="snip1157">
@@ -296,6 +271,9 @@ feature: [
 
 
 </div>
+
+
+
 <div class="sbody">
 <div class="box">
 	<h2>Subscribe to our Newsletter</h2>
@@ -307,6 +285,7 @@ feature: [
 </div>
 
 </div>
+
 </div>
 
   );
