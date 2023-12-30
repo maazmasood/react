@@ -8,52 +8,15 @@ image: '/g2.webp',
 room: 'Living Room',
 wifi: 'Incl. WiFi',
 brand: 'Panasonic',
-feature: [
-"Energieeffizienz A+++",
-"besonders energieeffizient",
-"modernes design",
-"Kühlen, Heizen und Entfeuchten",
-"flüster Betrieb",
-"nanoe™ X Filtertechnologi",
-"Fortgeschrittene Inverter-Technologie",
+description: 
+"Energieeffizienz A+++
+besonders energieeffizient
+modernes design
+Kühlen, Heizen und Entfeuchten
+flüster Betrieb
+nanoe™ X Filtertechnologi
+Fortgeschrittene Inverter-Technologie"
 ],
 },
-{
-id: 2,
-category: 'Starter',
-name: 'Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern',
-price: 1599.99,
-image: '/g3.webp',
-room: 'Living Room',
-wifi: 'Optional WiFi',
-brand: 'Mitsubishi',
-feature: [
-"Energieeffizienz bis A++",
-"energieeffizient",
-"modernes design",
-"Kühlen, Heizen und Entfeuchten",
-"Flüsterleiser Kompressor",
-"Auto Restart Funktion",
-"Fortgeschrittene Inverter-Technologie",
-],
-},
-{
-id: 3,
-category: 'Normal',
-name: 'LG Standard Plus - Modernes Design',
-price: 1599.99,
-image: '/g2.webp',
-room: 'Living Room',
-wifi: 'inkl. WiFi',
-brand: 'LG',
-feature: [
-"Energieeffizienz bis A++",
-"energieeffizient",
-"modernes design",
-"Kühlen, Heizen und Entfeuchten",
-"Flüsterleiser Kompressor",
-"R32 Kältemittel",
-"Fortgeschrittene Inverter-Technologie",
-],
-},
+
 ]
