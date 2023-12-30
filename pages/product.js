@@ -381,7 +381,7 @@ const ProductSearch = ({ products }) => {
             <div className="mb-4">
               <p className="text-gray-700 mb-2 ">
                 <span className="font-bold text-blue-500">Description:</span>
-                <br /> {selectedProduct.description}
+                <br /> <span dangerouslySetInnerHTML={{ __html: selectedProduct.description }} ></span>
               </p>
               <hr />
             </div>
