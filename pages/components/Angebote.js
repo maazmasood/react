@@ -4,9 +4,13 @@ import Link from "next/link";
 
 
 
-	};
 
-  const faqData = [
+
+const YourComponent = () => {
+
+  const router = useRouter(); 
+  // Manually entered data for three boxes
+  const products = 	 [
 [
   {
     "id": 1,
@@ -76,15 +80,6 @@ import Link from "next/link";
   },
 	  
   ];
-    { index: 1, question: 'What is Lorem Ipsum?', answer: 'Lorem Ipsum is...' },
-    // Add more FAQ entries as needed
-  ];
-
-const YourComponent = () => {
-
-  const router = useRouter(); 
-  // Manually entered data for three boxes
-  const products = 
 
   const handleProductClick = (productId) => {
     // Handle product click logic
