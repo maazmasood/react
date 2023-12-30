@@ -49,7 +49,25 @@ feature: [
 "Fortgeschrittene Inverter-Technologie",
 ],
 },
-
+{
+id: 3,
+category: 'Normal',
+name: 'LG Standard Plus - Modernes Design',
+price: 1599.99,
+image: '/g2.webp',
+room: 'Living Room',
+wifi: 'inkl. WiFi',
+brand: 'LG',
+feature: [
+"Energieeffizienz bis A++",
+"energieeffizient",
+"modernes design",
+"Kühlen, Heizen und Entfeuchten",
+"Flüsterleiser Kompressor",
+"R32 Kältemittel",
+"Fortgeschrittene Inverter-Technologie",
+],
+},
 ];
 
   const handleProductClick = (productId) => {
