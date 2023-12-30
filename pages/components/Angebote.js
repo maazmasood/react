@@ -30,7 +30,25 @@ feature: [
 "Fortgeschrittene Inverter-Technologie",
 ],
 },
-
+{
+id: 2,
+category: 'Starter',
+name: 'Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern',
+price: 1599.99,
+image: '/g3.webp',
+room: 'Living Room',
+wifi: 'Optional WiFi',
+brand: 'Mitsubishi',
+feature: [
+"Energieeffizienz bis A++",
+"energieeffizient",
+"modernes design",
+"Kühlen, Heizen und Entfeuchten",
+"Flüsterleiser Kompressor",
+"Auto Restart Funktion",
+"Fortgeschrittene Inverter-Technologie",
+],
+},
 
 ];
 
