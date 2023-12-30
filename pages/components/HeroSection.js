@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,12 +27,59 @@ export default function HeroSection() {
     router.push("/planer");
   };
 
+  const images = [
+    { src: '/ac.png', alt: 'Image 1' },
+  { src: '/ac3.png', alt: 'Image 3' },
+  { src: '/ac5.png', alt: 'Image 5' },
+  // Add more images as needed
+];
+
+const [currentIndex, setCurrentIndex] = useState(0);
+
+useEffect(() => {
+  // Auto move the carousel every 3 seconds
+  const interval = setInterval(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, 4000);
+
+  // Clear the interval on component unmount
+  return () => clearInterval(interval);
+}, [images]);
+
   return (
     <div
-      className="relative h-screen "
-      style={{ height: "100vh" }}
+      className="relative h-screen gradient"
+      style={{ height: "100vh"}}
     >
-      <div className="bg-gray-50 absolute lg:inset-y-0 lg:right-0 top-0 h-full w-full">
+      <div className=" absolute top-20 right-10 hidden lg:block">
+      <div
+       style={{
+         width: '690px',
+         height: '610px',
+         marginRight: '20px',
+         position: 'relative',
+         overflow: 'hidden',
+       }}
+     >
+       {images.map((image, index) => (
+         <img
+           key={index}
+           src={image.src}
+           alt={image.alt}
+           style={{
+             position: 'absolute',
+             top: '0',
+             left: '0',
+             width: '100%',
+             height: '100%',
+             opacity: index === currentIndex ? '1' : '0',
+             transition: 'opacity 0.5s ease-in-out',
+           }}
+         />
+       ))}
+     </div>
+      </div>
+      <div className="bg-gray-50 absolute lg:inset-y-0 lg:right-0 top-0 h-full w-full lg:hidden">
         <Image
           className="object-cover lg:object-right aspect-auto h-full lg:h-full lg:w-full"
           src="/Klima-Nrw-Home-Background.webp"
@@ -57,12 +105,12 @@ export default function HeroSection() {
                     minWidth: "80px",
                   }}
                 >
-                  Klima- Angibot einholon{" "}
+                  Klima- Angebot einholon {" "}
                 </div>
                 <div
                   onClick={scrollToSection}
                   className="rounded-full py-1 px-3 text-sm leading-6 text-white-500 ring-2 ring-gray-900/10 hover:ring-gray-900/20"
-                >
+                >Scroll not working
                   Bis zum 30 April noch von unserem Winterangebot Profitieren{" "}
                   <div className=" font-semibold text-blue-600 hover:cursor-pointer">
                     <span className=" inset-0" aria-hidden="true" />
