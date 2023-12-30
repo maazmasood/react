@@ -1,21 +1,39 @@
- [
-{
-id: 1,
-category: 'Premium',
-name: 'Panasonic Etherea - Stilvoll mit herausragenden Funktionen',
-price: 2199.99,
-image: '/g2.webp',
-room: 'Living Room',
-wifi: 'Incl. WiFi',
-brand: 'Panasonic',
-description: 
-"Energieeffizienz A+++
-besonders energieeffizient
-modernes design
-Kühlen, Heizen und Entfeuchten
-flüster Betrieb
-nanoe™ X Filtertechnologi
-Fortgeschrittene Inverter-Technologie",
-},
+[
+  {
+    "id": 1,
+    "name": "Panasonic Etherea - Stilvoll mit herausragenden Funktionen",
+    "image": ["g2.webp", "g3.webp", "g4.webp"],
+    "category": "Premium",
+    "brand": "Panasonic",
+    "room": "1 room",
+    "wifi": "inkl. WiFi",
+    "price": 2199,
+    "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+  },
+  {
+    "id": 2,
+    "name": "Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern",
+    "image": ["g4.webp", "g3.webp"],
+    "category": "Exklusiv",
+    "brand": "Mitsubishi",
+    "room": "2 room",
+    "wifi": "Optional WiFi",
+    "price": 1599.99,
+    "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+
+  },
+  {
+    "id": 3,
+    "name": "LG Standard Plus - Modernes Design",
+    "image": ["g3.webp", "g4.webp"],
+    "category": "Normal",
+    "brand": "LG",
+    "room": "3 room",
+    "wifi": "inkl. WiFi",
+    "price": 1799,
+    "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+
+  }
+
 
 ]
