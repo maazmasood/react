@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 
-
+@media screen and (min-width: 768px) {
+.gradient{
+  background: rgb(255,255,255);
+background: linear-gradient(159deg, rgba(255,255,255,1) 0%, rgba(37,99,235,1) 100%);
+}
+}
 
 .section {
   display: flex;
