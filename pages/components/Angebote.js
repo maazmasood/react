@@ -95,7 +95,7 @@ const YourComponent = () => {
     <div>
     <div className="p-10 m-10">
       <div className="header-container">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl creative-header-text">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl creative-header-text " id="section-id">
           Unsere Sale-Artikel
         </h1>
         <br />
