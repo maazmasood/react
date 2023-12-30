@@ -12,71 +12,25 @@ const YourComponent = () => {
   // Manually entered data for three boxes
   const products = 	 [
 {
-  "id": 1,
-  "name": "Product 1",
-  "image": "g2.webp",
-  "category": "Starter",
-  "brand": "Panasonic",
-  "room": "1 room",
-  "wifi": "Yes",
-  "price": 299.99,
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor.",
-  feature: [
+id: 1,
+category: 'Premium',
+name: 'Panasonic Etherea - Stilvoll mit herausragenden Funktionen',
+price: 2199.99,
+image: '/g2.webp',
+room: 'Living Room',
+wifi: 'Incl. WiFi',
+brand: 'Panasonic',
+feature: [
 "Energieeffizienz A+++",
 "besonders energieeffizient",
-"modernes Design",
-"kühlen, heizen und entfeuchten",
-"flüsterleiser Betrieb",
-"keine Zugerscheinungen",
-"reine Luft",
-"smart vernetzbar",
-"hygienisch",
+"modernes design",
+"Kühlen, Heizen und Entfeuchten",
+"flüster Betrieb",
+"nanoe™ X Filtertechnologi",
+"Fortgeschrittene Inverter-Technologie",
 ],
 },
-{
-  "id": 2,
-  "name": "Product 2",
-  "image": "g4.webp",
-  "category": "Exklusiv",
-  "brand": "LG",
-  "room": "2 room",
-  "wifi": "Yes",
-  "price": 399.99,
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor.",
-  feature: [
-"Energieeffizienz A+++",
-"besonders energieeffizient",
-"modernes Design",
-"kühlen, heizen und entfeuchten",
-"flüsterleiser Betrieb",
-"keine Zugerscheinungen",
-"reine Luft",
-"smart vernetzbar",
-"hygienisch",
-],
-},
-{
-  "id": 3,
-  "name": "Product 3",
-  "image": "g3.webp",
-  "category": "Premium",
-  "brand": "Samsung",
-  "room": "3 room",
-  "wifi": "Yes",
-  "price": 399.99,
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis in metus porttitor auctor.",
-  feature: [
-"Energieeffizienz A+++",
-"besonders energieeffizient",
-"modernes Design",
-"kühlen, heizen und entfeuchten",
-"flüsterleiser Betrieb",
-"keine Zugerscheinungen",
-"reine Luft",
-"smart vernetzbar",
-"hygienisch",
-],
-}
+
 
 ];
 
@@ -120,9 +74,8 @@ const YourComponent = () => {
               ></div>
               <div className="p-4">
                 <p className="text-gray-700 font-bold">{product.name}</p>
-                <p className="text-1xl text-right text-gray-900">
-                  <del>{`$${product.price.toFixed(2)}`}</del>
-                  <span className="text-md text-right text-theme">{`$${(product.price - 100).toFixed(2)}`}</span>
+                <p className="text-1xl text-right text-gray-900">                 
+                  <span className="text-md text-right text-theme">{`$${(product.price)}`}</span>
                 </p>
               </div>
               <div className="flex p-4 border-t border-gray-300 text-gray-700">
