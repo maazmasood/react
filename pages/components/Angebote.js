@@ -240,9 +240,8 @@ const YourComponent = () => {
 
 
 <div className="comments">
-  <figure class="snip1157">
-    <blockquote>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.
-      <div class="arrow"></div>
+   <figure class="snip1157">
+    <blockquote>Sehr zufrieden mit dem Kauf! Die Klimaanlagen, die ich bei diesem Unternehmen erworben habe, funktionieren einwandfrei. Die Beratung war professionell, und der Kundenservice war sehr hilfsbereit.    <div class="arrow"></div>
     </blockquote>
     <img src="man.jpg"  alt="man_sample3" />
     <div class="author">
@@ -250,8 +249,8 @@ const YourComponent = () => {
     </div>
   </figure>
   <figure class="snip1157 hover">
-    <blockquote>Thank you. before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...When a report looks this good, you know it'll get an A. That's a tip kids. Write it down.
-      <div class="arrow"></div>
+    <blockquote>Top-Qualität und exzellenter Service! Die Klimaanlagen dieses Unternehmens sind von höchster Qualität. Die Installation verlief reibungslos, und das Personal war äußerst kompetent.
+    <div class="arrow"></div>
     </blockquote>
     <img src="man2.jpg"alt="man_sample27" />
     <div class="author">
@@ -259,7 +258,7 @@ const YourComponent = () => {
     </div>
   </figure>
   <figure class="snip1157">
-    <blockquote>My behaviour is addictive functioning in a disease process of toxic co-dependency. I need holistic healing and wellness before I'll accept any responsibility for my actions.
+    <blockquote>Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen bietet eine beeindruckende Auswahl an Klimaanlagen, die den Bedürfnissen
       <div class="arrow"></div>
     </blockquote>
     <img src="man3.jpg" alt="man_sample17" />
