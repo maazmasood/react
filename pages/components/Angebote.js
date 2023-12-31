@@ -96,7 +96,7 @@ const YourComponent = () => {
               <div className="flex p-4 border-t border-gray-300 text-gray-700">
                 <div className="flex-1 inline-flex items-center">
                   <p>
-                    <span className="font-bold">Features: </span><br />
+                    <span className="font-bold">Merkmale: </span><br />
                    <span dangerouslySetInnerHTML={{ __html: product.description }} ></span>
                   </p>
                 </div>
@@ -276,11 +276,11 @@ const YourComponent = () => {
 
 <div class="sbody">
 <div class="box">
-	<h2>Subscribe to our Newsletter</h2>
-	<p>Our weekly newsletter provides you with the latest and most important happenings in the industry.</p>
+	<h2>Abonniere unseren Newsletter</h2>
+	<p>Unser Newsletter versorgt Sie mit den neuesten und wichtigsten Ereignissen der Branche.</p>
 	<div class="form-control">
-		<input type="text" class="input" placeholder="Enter e-mail adress" />
-		<button class="btn">Subscribe</button>
+		<input type="text" class="input" placeholder="Geben Sie die E-Mail-Adresse ein" />
+		<button class="btn">Abonnieren</button>
 	</div>
 </div>
 
