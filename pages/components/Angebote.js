@@ -54,7 +54,7 @@ const YourComponent = () => {
 
   return (
     <div>
-    <div className="p-10 m-10">
+    <div className="p-5 m-5 md:p-10 md:m-10">
       <div className="header-container">
         <h1 className="text-4xl md:text-5xl lg:text-6xl creative-header-text" id="section-id">
           Unsere Sale-Artikel
@@ -124,13 +124,14 @@ const YourComponent = () => {
         href="/planer"
         className="rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
       >
-      Konfigurieren Sie jetzt Ihren Plan
+    Jetzt konfigurieren
       </Link>
     </div>
   </div>
 </div>
 
-
+</div>
+<div className="md:m-10 md:p-10">
 <br />
 <section>
 <div className="header-container">
@@ -227,7 +228,7 @@ const YourComponent = () => {
 
           <div className="header-container">
             <h1 className="text-4xl md:text-5xl lg:text-6xl creative-header-text">
-            Kundenerfahrungen
+            Kundener fahrungen
             </h1>
             <br />
             <p className="text-grey-600 text-sm">Entdecken Sie die Erfahrungen unserer zufriedenen Kunden.</p>
@@ -252,18 +253,18 @@ const YourComponent = () => {
     <blockquote>Thank you. before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...When a report looks this good, you know it'll get an A. That's a tip kids. Write it down.
       <div class="arrow"></div>
     </blockquote>
-    <img src="man.jpg"alt="man_sample27" />
+    <img src="man2.jpg"alt="man_sample27" />
     <div class="author">
-      <h5>Sarah Mitchell<span> Marketing Specialist</span></h5>
+      <h5>Chris Anderson<span> Marketing Specialist</span></h5>
     </div>
   </figure>
   <figure class="snip1157">
     <blockquote>My behaviour is addictive functioning in a disease process of toxic co-dependency. I need holistic healing and wellness before I'll accept any responsibility for my actions.
       <div class="arrow"></div>
     </blockquote>
-    <img src="man.jpg" alt="man_sample17" />
+    <img src="man3.jpg" alt="man_sample17" />
     <div class="author">
-      <h5>Chris Anderson<span> Senior Software Engineer</span></h5>
+      <h5>Sarah Mitchell<span> Software Engineer</span></h5>
     </div>
   </figure>
 
