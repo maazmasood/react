@@ -245,7 +245,7 @@ const YourComponent = () => {
     </blockquote>
     <img src="man.jpg"  alt="man_sample3" />
     <div class="author">
-      <h5> Alex Turner <span> Project Coordinator </span></h5>
+      <h5> Alex Turner <span> Hausbesitzer </span></h5>
     </div>
   </figure>
   <figure class="snip1157 hover">
@@ -254,7 +254,7 @@ const YourComponent = () => {
     </blockquote>
     <img src="man2.jpg"alt="man_sample27" />
     <div class="author">
-      <h5>Chris Anderson<span> Marketing Specialist</span></h5>
+      <h5>Chris Anderson<span> Ladenbesitzer</span></h5>
     </div>
   </figure>
   <figure class="snip1157">
@@ -263,7 +263,7 @@ const YourComponent = () => {
     </blockquote>
     <img src="man3.jpg" alt="man_sample17" />
     <div class="author">
-      <h5>Sarah Mitchell<span> Software Engineer</span></h5>
+      <h5>Sarah Mitchell<span> Geschäftsinhaber</span></h5>
     </div>
   </figure>
 
