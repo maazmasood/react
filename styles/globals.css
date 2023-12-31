@@ -20,7 +20,7 @@ background: linear-gradient(159deg, rgba(255,255,255,1) 0%, rgba(37,99,235,1) 10
   color:white;
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 800px) {
   .main_screen{
 
 height: 180vh;
