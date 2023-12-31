@@ -28,8 +28,6 @@ export default function HeroSection() {
   };
 
   const images = [
-    { src: '/ac.png', alt: 'Image 1' },
-  { src: '/ac3.png', alt: 'Image 3' },
   { src: '/ac5.png', alt: 'Image 5' },
   // Add more images as needed
 ];
@@ -48,8 +46,7 @@ useEffect(() => {
 
   return (
     <div
-      className="relative h-screen gradient"
-      style={{ height: "100vh"}}
+      className="relative md:h-screen gradient main_screen"
     >
       <div className=" absolute top-20 right-10 hidden lg:block">
       <div
