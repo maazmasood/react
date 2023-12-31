@@ -258,7 +258,7 @@ const YourComponent = () => {
     </div>
   </figure>
   <figure class="snip1157">
-    <blockquote>Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen bietet eine beeindruckende Auswahl an Klimaanlagen, die den Bedürfnissen
+       <blockquote>Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen bietet eine beeindruckende Auswahl an Klimaanlagen, die den Bedürfnissen verschiedener Kunden gerecht
       <div class="arrow"></div>
     </blockquote>
     <img src="man3.jpg" alt="man_sample17" />
