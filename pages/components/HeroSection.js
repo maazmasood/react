@@ -102,7 +102,7 @@ useEffect(() => {
                     minWidth: "80px",
                   }}
                 >
-                  Klima- Angebot einholon {" "}
+                Klima- Angebot Einholen {" "}
                 </div>
                 <div
                   onClick={scrollToSection}
@@ -127,7 +127,7 @@ useEffect(() => {
                     minWidth: "80px",
                   }}
                 >
-                  Klima- Angibot einholon{" "}
+                Klima- Angebot Einholen{" "}
                 </div>
                 <div
                   onClick={scrollToSection}
