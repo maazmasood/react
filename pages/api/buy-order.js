@@ -7,7 +7,7 @@ sgMail.setApiKey(
 
 export default async (req, res) => {
   const {
-    panme,
+    pname,
     pid,
     selectedroomno,
     roomsizes,
@@ -16,8 +16,8 @@ export default async (req, res) => {
     cablelength,
     days,
     outdoorColor,
-    roofmount,
     rubber,
+    plastic,
     price,
     firstName,
     lastName,
@@ -50,16 +50,15 @@ export default async (req, res) => {
     `<th style="padding: 8px; text-align: left;">Value</th>`,
     `</tr>`,
     `<tr><td>Product Id : </td><td>${pid}</td></tr>`,
-    `<tr><td>Product Name : </td><td>${panme}</td></tr>`,
+    `<tr><td>Product Name : </td><td>${pname}</td></tr>`,
     `<tr><td>Selected Rooms : </td><td>${selectedroomno}</td></tr>`,
     ...roomSizeRows, // Include room sizes
     `<tr><td>Brand : </td><td>${brand}</td></tr>`,
     `<tr><td>Mount Location : </td><td>${mountlocation}</td></tr>`,
     `<tr><td>Cable Length : </td><td>${cablelength}</td></tr>`,
-    `<tr><td>7days Check : </td><td>${days}</td></tr>`,
-    `<tr><td>Outdoor color Check : </td><td>${outdoorColor}</td></tr>`,
-    `<tr><td>Roof Mount : </td><td>${roofmount}</td></tr>`,
-    `<tr><td>Rubber Feets : </td><td>${rubber}</td></tr>`,
+    `<tr><td>7days installation : </td><td>${days}</td></tr>`,
+    `<tr><td>Outdoor/indoor unit coloring : </td><td>${outdoorColor}</td></tr>`,
+    rubber ? `<tr><td>Rubber Feets : </td><td>${rubber}</td></tr>` : `<tr><td>Plastic Feets : </td><td>${plastic}</td></tr>`,
     `<tr><td>Total Price : </td><td>${price}</td></tr>`,
     `</table>`,
     `<h1>User Details</h1>`,
@@ -68,25 +67,27 @@ export default async (req, res) => {
     `<th style="padding: 8px; text-align: left;">Field</th>`,
     `<th style="padding: 8px; text-align: left;">Value</th>`,
     `</tr>`,
-    `<tr><td>User Nanem : </td><td>${firstName} ${lastName}</td></tr>`,
+    `<tr><td>User Name : </td><td>${firstName} ${lastName}</td></tr>`,
     `<tr><td>Location : </td><td>${location}</td></tr>`,
     `<tr><td>Email </td><td>${email}</td></tr>`,
     `<tr><td>Phone </td><td>${phoneNumber}</td></tr>`,
     `<tr><td>Message </td><td>${message}</td></tr>`,
     `</table>`,
   ].join("");
+
   const textContent = content;
   const htmlContent = content;
 
   const mail = {
     to: "maazmasood001@gmail.com", // replace with your email
-    from: "Klimanrw@gmail.com", // replace with your domain email
+    from: "klimanrw@gmail.com", // replace with your domain email
     subject: "Neue Nachricht aus Kontaktform Klimanrw",
     text: textContent,
     html: htmlContent,
   };
 
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
   try {
     await sgMail.send(mail);
     res.status(200).send("Email sent successfully");
