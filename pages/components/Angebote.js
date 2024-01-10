@@ -12,7 +12,7 @@ const YourComponent = () => {
       {
         "id": 1,
         "name": "Panasonic Etherea - Stilvoll mit herausragenden Funktionen",
-        "image": ["g2.webp", "g3.webp"],
+    "image": ["ac.png", "ac3.png", "ac5.png"],
         "category": "Premium",
         "brand": "Panasonic",
         "room": "1 room",
@@ -23,7 +23,7 @@ const YourComponent = () => {
       {
         "id": 2,
         "name": "Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern",
-        "image": ["g4.webp", "g3.webp"],
+    "image": ["ac3.png", "ac.png", "ac5.png"],
         "category": "Exklusiv",
         "brand": "Mitsubishi",
         "room": "2 room",
@@ -35,7 +35,7 @@ const YourComponent = () => {
       {
         "id": 3,
         "name": "LG Standard Plus - Modernes Design",
-        "image": ["g3.webp", "g4.webp"],
+    "image": ["ac5.png", "ac3.png", "ac.png"],
         "category": "Normal",
         "brand": "LG",
         "room": "3 room",
