@@ -13,7 +13,7 @@
   {
     "id": 2,
     "name": "Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern",
-    "image": ["g4.webp", "g3.webp"],
+    "image": ["ac3.png", "ac.png", "ac5.png"],
     "category": "Exklusiv",
     "brand": "Mitsubishi",
     "room": "2 room",
@@ -25,7 +25,7 @@
   {
     "id": 3,
     "name": "LG Standard Plus - Modernes Design",
-    "image": ["g3.webp", "g4.webp"],
+    "image": ["ac5.png", "ac3.png", "ac.png"],
     "category": "Normal",
     "brand": "LG",
     "room": "3 room",
