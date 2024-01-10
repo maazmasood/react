@@ -17,12 +17,18 @@ const ProductSearch = ({ products }) => {
   const [selectedBrand, setSelectedBrand] = useState("Lg");
   const [totalCableLength, setTotalCableLength] = useState(0);
   const [additionalOptions, setAdditionalOptions] = useState({
-    rubberFeet: false,
-    roofMount: false,
-    colorOutdoorUnit: false,
+    painting: false,
     assemblyWithin7Days: false,
+    rubberFeet: false,
+    plasticFeet: false,
   });
 
+  const locationCosts = {
+     floor: 100,
+     "wall-up-to-2.50m": 45,
+     "wall-over-2.50m": 45,
+     roof: 220,
+   };
   const [showContactForm, setShowContactForm] = useState(false);
 
   // State for contact form data
@@ -99,12 +105,25 @@ const ProductSearch = ({ products }) => {
   const handleCableLengthChange = (event) => {
     setTotalCableLength(event.target.value);
   };
-
   const handleCheckboxChange = (option) => {
     setAdditionalOptions((prevOptions) => ({
       ...prevOptions,
       [option]: !prevOptions[option],
     }));
+
+    // Ensure only one option is selected for rubber/plastic feet
+    if (option === "rubberFeet" && additionalOptions.plasticFeet) {
+      setAdditionalOptions((prevOptions) => ({
+        ...prevOptions,
+        plasticFeet: false,
+      }));
+    } else if (option === "plasticFeet" && additionalOptions.rubberFeet) {
+      setAdditionalOptions((prevOptions) => ({
+        ...prevOptions,
+        rubberFeet: false,
+      }));
+    }
+
   };
 
   const handleRoomSizeChange = (event, index) => {
@@ -127,7 +146,7 @@ const ProductSearch = ({ products }) => {
     // Combine product order data and contact form data
     const requestData = {
       // ... (your existing product order data)
-      panme: selectedProduct.name,
+      pname: selectedProduct.name,
       pid: selectedProduct.id,
       selectedroomno: selectedRooms,
       roomsizes: roomSizes.map((room) => room.size),
@@ -135,9 +154,9 @@ const ProductSearch = ({ products }) => {
       mountlocation: selectedLocation,
       cablelength: totalCableLength,
       days: additionalOptions.assemblyWithin7Days,
-      outdoorColor: additionalOptions.colorOutdoorUnit,
-      roofmount: additionalOptions.roofMount,
+      outdoorColor: additionalOptions.painting,
       rubber: additionalOptions.rubberFeet,
+      plastic: additionalOptions.plasticFeet,
       price: calculateTotalPrice(),
 
       // Contact form data
@@ -150,8 +169,8 @@ const ProductSearch = ({ products }) => {
     };
 
     try {
-      //const response = await axios.post("/api/buy-order", requestData);
-      console.log(contactFormData);
+      const response = await axios.post("/api/buy-order", requestData);
+      console.log(response);
       setOrderStatus("Order Filled! Our team will contact you soon.");
     } catch (error) {
       console.error("Error sending order, please try again! Error: ", error);
@@ -180,27 +199,29 @@ const ProductSearch = ({ products }) => {
     return (
       selectedProduct &&
       selectedProduct.price +
-        (additionalOptions.rubberFeet ? 40 : 0) +
-        (additionalOptions.roofMount ? 20 : 0) +
-        (additionalOptions.colorOutdoorUnit ? 20 : 0) +
-        (additionalOptions.assemblyWithin7Days ? 20 : 0) +
-        calculateCableLengthPrice(totalCableLength, selectedRooms)
+      (additionalOptions.painting ? 300 : 0) +
+      (additionalOptions.assemblyWithin7Days ? 100 : 0) +
+      (additionalOptions.rubberFeet ? 55 : 0) +
+      (additionalOptions.plasticFeet ? 25 : 0) +
+         locationCosts[selectedLocation] +
+      calculateCableLengthPrice(totalCableLength, selectedRooms)
     );
   };
 
   const totalPrice =
     selectedProduct &&
     selectedProduct.price +
-      (additionalOptions.rubberFeet ? 40 : 0) +
-      (additionalOptions.roofMount ? 20 : 0) +
-      (additionalOptions.colorOutdoorUnit ? 20 : 0) +
-      (additionalOptions.assemblyWithin7Days ? 20 : 0) +
+      (additionalOptions.painting ? 300 : 0) +
+      (additionalOptions.assemblyWithin7Days ? 100 : 0) +
+      (additionalOptions.rubberFeet ? 55 : 0) +
+      (additionalOptions.plasticFeet ? 25 : 0) +
+         locationCosts[selectedLocation] +
       calculateCableLengthPrice(totalCableLength, selectedRooms);
 
   const roomSizeRows = Array.from({ length: parseInt(selectedRooms, 10) }).map(
     (_, index) => (
       <tr key={index}>
-        <td className="font-bold pr-2 text-gray-600">Room {index + 1} Size:</td>
+        <td className="font-bold pr-2 text-gray-600">Zimmer {index + 1} Größe:</td>
         <td className="text-center">
           <select
             value={roomSizes[index]?.size || ""}
@@ -234,21 +255,20 @@ const ProductSearch = ({ products }) => {
           <>
             <button
               style={{ opacity: "0.5" }}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 "
+              className="absolute left-0 top-1/3 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 "
               onClick={() => handleImageChange(currentImageIndex - 1)}
               disabled={currentImageIndex === 0}
             >
               {"<"}
-            </button>
+            </button><center>
             <img
-              className="w-full object-cover mb-4"
-              style={{ height: "500px" }}
+              className="md:max-h-[500px] object-cover mb-4"
               src={selectedProduct.image[currentImageIndex]}
               alt={selectedProduct.name}
-            />
+            /></center>
             <button
               style={{ opacity: "0.5" }}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2"
+              className="absolute right-0 top-1/3 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2"
               onClick={() => handleImageChange(currentImageIndex + 1)}
               disabled={currentImageIndex === selectedProduct.image.length - 1}
             >
@@ -300,7 +320,7 @@ const ProductSearch = ({ products }) => {
                   <br />
                   <tr>
                     <td className="font-bold pr-2 text-gray-600">
-                      Preferred for:
+                      Bevorzugt für:
                     </td>
                     <td className="text-center">{selectedProduct.room}</td>
                   </tr>
@@ -308,7 +328,7 @@ const ProductSearch = ({ products }) => {
 
                   <tr>
                     <td className="font-bold pr-2 text-gray-600">
-                      WiFi Available:
+                      WLAN verfügbar:
                     </td>
                     <td className="text-center">{selectedProduct.wifi}</td>
                   </tr>
@@ -316,7 +336,7 @@ const ProductSearch = ({ products }) => {
 
                   <tr>
                     <td className="font-bold pr-2 text-gray-600">
-                      Number of Rooms:
+                    Anzahl der Räume:
                     </td>
                     <td className="text-center">
                       <select
@@ -338,7 +358,7 @@ const ProductSearch = ({ products }) => {
 
                   <tr>
                     <td className="font-bold pr-2 text-gray-600">
-                      Location of Outdoor Unit:
+                      Standort der Außeneinheit:
                     </td>
                     <td className="text-center">
                       <select
@@ -346,20 +366,20 @@ const ProductSearch = ({ products }) => {
                         onChange={handleLocationChange}
                         className="mt-1 block w-full rounded-full border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 text-center"
                       >
-                        <option value="floor">Floor</option>
+                        <option value="floor">Boden - 100 €</option>
                         <option value="wall-up-to-2.50m">
-                          Wall (up to 2.50 meters)
+                        Wand (bis 2,50 Meter) - 45 €
                         </option>
                         <option value="wall-over-2.50m">
-                          Wall (over 2.50 meters)
+                          Mauer (über 2,50 Meter) - 45 €
                         </option>
-                        <option value="roof">Roof</option>
+                        <option value="roof">Dach - 220 €</option>
                       </select>
                     </td>
                   </tr>
                   <tr>
                     <td className="font-bold pr-2 text-gray-600">
-                      Total Cable Length:
+                    Gesamtkabellänge:
                     </td>
                     <td className="text-center">
                       <input
@@ -380,7 +400,7 @@ const ProductSearch = ({ products }) => {
             </div>
             <div className="mb-4">
               <p className="text-gray-700 mb-2 ">
-                <span className="font-bold text-blue-500">Description:</span>
+                <span className="font-bold text-blue-500">Beschreibung:</span>
                 <br /> <span dangerouslySetInnerHTML={{ __html: selectedProduct.description }} ></span>
               </p>
               <hr />
@@ -388,58 +408,71 @@ const ProductSearch = ({ products }) => {
 
             <div className="mb-4">
               <h3 className="text-lg font-semibold mb-2 text-blue-500 ">
-                Additional Options:
+                Zusatzoptionen:
               </h3>
               <div className="grid grid-cols-2 gap-4 text-center">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={additionalOptions.rubberFeet}
-                    onChange={() => handleCheckboxChange("rubberFeet")}
-                    className="mr-2"
-                  />{" "}
-                  Rubber Feet
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={additionalOptions.roofMount}
-                    onChange={() => handleCheckboxChange("roofMount")}
-                    className="mr-2"
-                  />{" "}
-                  Roof Mount (choose color)
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={additionalOptions.colorOutdoorUnit}
-                    onChange={() => handleCheckboxChange("colorOutdoorUnit")}
-                    className="mr-2"
-                  />{" "}
-                  Color of Outdoor Unit
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={additionalOptions.assemblyWithin7Days}
-                    onChange={() => handleCheckboxChange("assemblyWithin7Days")}
-                    className="mr-2"
-                  />{" "}
-                  Assembly Within 7 Days
-                </label>
+              <label className="flex items-center">
+  <input
+    type="checkbox"
+    checked={additionalOptions.painting}
+    onChange={() => handleCheckboxChange("painting")}
+    className="mr-2"
+  />{" "}
+  Painting (Indoor/Outdoor) - 300 €
+</label>
+
+<label className="flex items-center">
+  <input
+    type="checkbox"
+    checked={additionalOptions.assemblyWithin7Days}
+    onChange={() => handleCheckboxChange("assemblyWithin7Days")}
+    className="mr-2"
+  />{" "}
+  Assembly Within 7 Days - 100 €
+</label>
+
+<label className="flex items-center">
+  <input
+    type="checkbox"
+    checked={additionalOptions.rubberFeet}
+    onChange={() => handleCheckboxChange("rubberFeet")}
+    className="mr-2"
+  />{" "}
+  Rubber Feet - 55 €
+</label>
+
+<label className="flex items-center">
+  <input
+    type="checkbox"
+    checked={additionalOptions.plasticFeet}
+    onChange={() => handleCheckboxChange("plasticFeet")}
+    className="mr-2"
+  />{" "}
+  Plastic Feet - 25 €
+</label>
+
               </div>
             </div>
 
             {/* Display the total price */}
             <div className="mb-4">
-              <br />
-              <p className="text-gray-700 mb-2 text-l">
-                <span className="font-bold text-blue-500 text-md">
-                  Total Price:
-                </span>{" "}
-                {totalPrice} euros
-              </p>
-            </div>
+            <br />
+            <br />
+            <p className="text-gray-500 mb-2 text-md">
+              <span className="font-bold text-sm">
+                Product Price:
+              </span>{" "}
+              {selectedProduct.price} euros
+            </p>
+
+            <p className="text-gray-700 mb-2 text-l">
+              <span className="font-bold text-blue-500 text-lg">
+                Total Price:
+              </span>{" "}
+              {totalPrice} euros
+            </p>
+
+</div>
 
             {/* Buy Button */}
             <div className="">
