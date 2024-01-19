@@ -28,7 +28,7 @@ export default function HeroSection() {
   };
 
   const images = [
-  { src: '/ac5.png', alt: 'Image 5' },
+  { src: '/bg_slideshow.png', alt: 'slideshow' },
   // Add more images as needed
 ];
 
