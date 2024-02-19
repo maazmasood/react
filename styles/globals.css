@@ -5,10 +5,9 @@
 @media screen and (min-width: 768px) {
 .gradient{
   background: rgb(255,255,255);
-background: linear-gradient(159deg, rgba(255,255,255,1) 0%, rgba(37,99,235,1) 100%);
+  background: linear-gradient(159deg, rgba(255,255,255,1) 0%, rgba(59,130,246,1) 100%);
 }
 }
-
 
 .section {
   display: flex;
@@ -35,7 +34,6 @@ height: 120vh;
 
   }
 }
-
 
 #s3 {
   background: linear-gradient(
@@ -299,9 +297,11 @@ figure.snip1157 .author h5 span {
 
 /* Demo purposes only */
 .comments {
-  margin-top: 50px;
-  padding: 50px;
-  background-color: #eee;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
