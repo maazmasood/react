@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useRouter } from "next/router";
 import Image from "next/image";
 import axios from "axios";
 
@@ -103,6 +103,10 @@ const MultiStepForm = () => {
     );
   };
 
+  const router = useRouter();
+  const { product } = router.query;
+  const product_namex = product || "Nothing";
+
   const handleSubmit = async (event) => {
     setLoading(true);
     let formDataJson = {};
@@ -122,6 +126,7 @@ const MultiStepForm = () => {
     const formDataString = JSON.stringify(formDataJson, null, 2);
 
     const data = {
+      pname: product_namex,
       Answer_1: formData["1"]["answer"],
       Answer_2: formData["2"]["answer"],
       Answer_3: formData["3"]["answer"],
