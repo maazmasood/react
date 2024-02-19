@@ -41,7 +41,7 @@ export default function HeroSection() {
 
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 pt-52 lg:pt-14 h-screen lg:w-full lg:max-w-2xl">
-          <div className="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0">
+          <div className="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0 mt-6">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div className="hidden sm:mb-10 sm:block">
                 <div
