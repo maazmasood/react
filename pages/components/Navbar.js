@@ -12,10 +12,10 @@ import { useRouter } from "next/router";
 const navigation = [
   //  { name: "Klimaanlagen", href: "/klimaanlagen" },
   //{ name: "Wärmepumpen", href: "/Waermepumpen" },
-  { name: "Produkte", href: "/shop" },
   { name: "Service", href: "/Service" },
   { name: "Über Uns", href: "/Ueber-uns" },
   { name: "Galerie", href: "/Galerie" },
+  { name: "Planer", href: "/planer" },
   { name: "Kontakt", href: "/Kontakt" },
 ];
 
