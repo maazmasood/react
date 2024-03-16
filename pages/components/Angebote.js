@@ -713,16 +713,13 @@ export default function Angebote() {
         </div>
       </div>
 
-      <section
-        id="s3"
-        className="section flex flex-col items-center block md:hidden"
-      >
+      <section id="s3" className="section flex flex-col items-center md:hidden">
         <div className="text-center px-4">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight  text-white-800">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white-800">
             Sie sind sich nicht sicher,
             <br /> was Sie kaufen sollen?
           </h1>
-          <p className="mt-4 text-lg leading-relaxed  text-white">
+          <p className="mt-4 text-lg leading-relaxed text-white">
             Unser Beratungsservice ist kostenlos
           </p>
         </div>
@@ -737,29 +734,28 @@ export default function Angebote() {
         </div>
       </section>
 
-      <section
-        id="s3"
-        className="section flex justify-center items-center hidden md:visible"
-      >
-        <div className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white-800">
-            Sie sind sich nicht sicher,
-            <br /> was Sie kaufen sollen?
-          </h1>
-          <p className="mt-4 text-lg leading-relaxed text-white">
-            Unser Beratungsservice ist kostenlos
-          </p>
-        </div>
-        <div className="lg:pl-8">
-          <div className="flex justify-center items-center w-full h-1/2 px-8">
-            <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl w-full h-full">
-              <div className="flex justify-center mt-4 p-4">
-                <MainForm />
+      <div className="hidden md:block">
+        <section id="s3" className="section s4 justify-center items-centerflex">
+          <div className="text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white-800">
+              Sie sind sich nicht sicher,...
+              <br /> was Sie kaufen sollen?
+            </h1>
+            <p className="mt-4 text-lg leading-relaxed text-white">
+              Unser Beratungsservice ist kostenlos
+            </p>
+          </div>
+          <div className="lg:pl-8">
+            <div className="flex justify-center items-center w-full h-1/2 px-8">
+              <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl w-full h-full">
+                <div className="flex justify-center mt-4 p-4">
+                  <MainForm />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
