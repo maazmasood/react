@@ -151,13 +151,13 @@ export default function Angebote() {
 
   const images = [
     { src: "/gallery/g1.webp", alt: "Image 1" },
-    { src: "/gallery/Bild12.webp", alt: "Image 2" },
-    { src: "/gallery/Bild13.webp", alt: "Image 1" },
-    { src: "/gallery/Bild12.webp", alt: "Image 2" },
+    { src: "/gallery/g2.webp", alt: "Image 2" },
     { src: "/gallery/g1.webp", alt: "Image 1" },
-    { src: "/gallery/Bild12.webp", alt: "Image 2" },
-    { src: "/gallery/Bild13.webp", alt: "Image 1" },
-    { src: "/gallery/Bild12.webp", alt: "Image 2" },
+    { src: "/gallery/g2.webp", alt: "Image 2" },
+    { src: "/gallery/g1.webp", alt: "Image 1" },
+    { src: "/gallery/g2.webp", alt: "Image 2" },
+    { src: "/gallery/g1.webp", alt: "Image 1" },
+    { src: "/gallery/g2.webp", alt: "Image 2" },
     // Add more images as needed
   ];
 
