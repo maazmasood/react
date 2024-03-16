@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+
 import Image from "next/image";
 import axios from "axios";
 
@@ -55,6 +56,10 @@ const MultiStepForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false); // New state variable
   const [loading, setLoading] = useState(false);
 
+  const router = useRouter();
+  const { product } = router.query;
+  const product_namex = product || "None";
+
   const currentQuestion = questions.find((q) => q.page === step);
 
   const handleOptionClick = (value) => {
@@ -103,12 +108,9 @@ const MultiStepForm = () => {
     );
   };
 
-  const router = useRouter();
-  const { product } = router.query;
-  const product_namex = product || "Nothing";
-
   const handleSubmit = async (event) => {
     setLoading(true);
+
     let formDataJson = {};
 
     for (const [key, value] of Object.entries(formData)) {
@@ -141,12 +143,20 @@ const MultiStepForm = () => {
     try {
       const response = await axios.post("/api/send-email", data);
       setFormSubmitted(true);
+      trackConversion(formData["Ihre E-Mail"]);
     } catch (error) {
       console.error("Error sending email please try again! Error :", error);
     } finally {
       setLoading(false);
     }
   };
+
+  function trackConversion(eee) {
+    gtag("set", "user_data", { email: eee });
+    gtag("event", "conversion", {
+      send_to: "AW-308056398/qUB6CK_3tJUZEM6i8pIB",
+    });
+  }
 
   return (
     <div id="form-body">
@@ -162,6 +172,14 @@ const MultiStepForm = () => {
         </div>
       ) : (
         <div className="form-container">
+          <div>
+            {product && (
+              <div>
+                <h1 style={{ textAlign: "center" }}>{product}</h1> <hr />
+              </div>
+            )}
+          </div>
+
           <div className="form">
             <p style={{ textAlign: "center" }}>{currentQuestion.question}</p>
             <div
@@ -184,11 +202,11 @@ const MultiStepForm = () => {
                 </div>
               ))}
             </div>
-
             {/* For Form 4 and Form 5: Add a text input */}
             {currentQuestion.textbox && (
               <div className="text-container">
                 <textarea
+                  className="w-full h-32 p-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
                   placeholder="(0-40) In Meter angebene..."
                   name="answer"
                   value={inputValue}
@@ -198,7 +216,6 @@ const MultiStepForm = () => {
                 {step === 4 && renderButtons()}
               </div>
             )}
-
             {/* Additional fields for Form 5 */}
             {/* Additional fields for Form 5 */}
             {step === 5 && (
@@ -298,9 +315,7 @@ const MultiStepForm = () => {
                 {renderButtons()}
               </div>
             )}
-
             {!currentQuestion.textbox && step !== 5 && renderButtons()}
-
             {step === 6 && (
               <div
                 style={{
