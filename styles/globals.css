@@ -9,6 +9,8 @@
 }
 }
 
+
+
 .section {
   display: flex;
   width: 100%;
@@ -39,10 +41,14 @@ height: 120vh;
   background: linear-gradient(
     90deg,
     rgba(44, 69, 135, 1) 0%,
-    rgba(76, 112, 199, 1) 35%,
+    rgba(76, 112, 199, 1) 50%,
     rgba(43,60,97,1) 100%
   );
   background-size: cover;
+}
+
+#s3-text {
+  color: rgba(44, 69, 135, 1); /* Adjusted to match the first color in the gradient */
 }
 
 
