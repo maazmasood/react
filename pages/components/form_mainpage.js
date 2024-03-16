@@ -38,21 +38,7 @@ export default function Kontakt() {
   }
 
   return (
-    <>
-      <Head>
-        <title>
-          Kontakt - Treten Sie mit Klimanrw in Kontakt für klimafreundliche
-          Lösungen
-        </title>
-        <meta
-          name="description"
-          content="Kontaktieren Sie uns für eine persönliche Beratung rund um das Thema Klimaanlagen. Unsere Adresse lautet Huttropstraße 60, 45138 Essen (Germany). Tel: 02369 4049939, Email: Info@klimanrw.de"
-        />
-        <meta
-          name="keywords"
-          content="Kontakt, Klimaanlagen, Beratung, Adresse, Telefon, Email, Klimanrw, Essen, Deutschland"
-        />
-      </Head>
+    <>      
       <form
         onSubmit={handleSubmit}
         className="rounded-lg bg-grey mx-auto mt-6 p-8 "
