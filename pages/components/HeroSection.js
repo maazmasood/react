@@ -41,10 +41,11 @@ export default function HeroSection() {
 
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 pt-52 lg:pt-14 h-screen lg:w-full lg:max-w-2xl">
-          <div className="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0 mt-6">
+          <div className="relative  px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0 sm:mb-2 sm:mt-2 lg:mt-6">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div className="hidden sm:mb-10 sm:block">
                 <div
+                  id="s3"
                   onClick={handleClick}
                   className="sm:block rounded mb-5 text-lg cursor-pointer text-white-800 bg-blue-600 px-1.5 py-3.5 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   style={{
@@ -61,7 +62,7 @@ export default function HeroSection() {
                   className="rounded-full py-1 px-3 text-sm cursor-pointer leading-6 text-white-500 ring-2 ring-gray-900/10 hover:ring-gray-900/20"
                 >
                   Bis zum 30 April noch von unserem Winterangebot Profitieren{" "}
-                  <div className=" font-semibold text-blue-600">
+                  <div className=" font-semibold " id="s3-text">
                     <span className=" inset-0" aria-hidden="true" />
                     Mehr Erfahren <span aria-hidden="true">&rarr;</span>
                   </div>
@@ -70,12 +71,13 @@ export default function HeroSection() {
 
               <div className=" sm:mb-10 sm:hidden">
                 <div
+                  id="s3"
                   onClick={handleClick}
                   className="sm:block rounded mb-5 text-lg text-white-800 bg-blue-600 px-1.5 py-3.5 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   style={{
                     marginTop: "-80px",
                     textAlign: "center",
-                    fontSize: "30px",
+                    fontSize: "20px",
                     minWidth: "80px",
                   }}
                 >
@@ -86,20 +88,27 @@ export default function HeroSection() {
                   className="relative rounded-full mb-5 py-1 px-3 text-sm leading-6 text-white-500 ring-2 ring-blue-700 hover:ring-gray-900/20"
                 >
                   Bis zum 30 April noch von unserem Winterangebot Profitieren{" "}
-                  <span className="whitespace-nowrap font-semibold text-blue-600">
+                  <span
+                    className="whitespace-nowrap font-semibold "
+                    id="s3-text"
+                  >
                     Mehr Erfahren <span aria-hidden="true">&rarr;</span>
                   </span>
                 </div>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
                 <span className="text-red-600">Wärme</span> und{" "}
-                <span className="text-blue-600">Kälte</span> mit gutem Gewissen
+                <span className="text-blue-600" id="s3-text">
+                  Kälte
+                </span>{" "}
+                mit gutem Gewissen
               </h1>
               <p className="mt-6 text-xl leading-8 text-white-600">
                 unsere Klimaanlagen und Wärmepumpen machen es möglich!
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
+                  id="s3"
                   href="/planer"
                   className="rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
