@@ -33,7 +33,8 @@ export default function App({ Component, pageProps }) {
       <a
         href="tel:023694049939"
         title="Klima-Nrw-Telefon"
-        className="lg:hidden fixed bottom-6 right-4 z-50 inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        id="s3"
+        className="lg:hidden fixed bottom-6 right-4 z-50 inline-flex items-center p-3 text-sm font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300  dark:focus:ring-blue-800"
       >
         <PhoneIcon className="h-7 w-6" aria-hidden="true" />
       </a>
