@@ -436,7 +436,7 @@ export default function Angebote() {
                 <div className="relative">
                   <Image
                     className="w-full rounded-xl"
-                    src="/Klima-Nrw-Angebote-Daikin.webp"
+                    src="/Klima-Nrw-Angebote-Daikin.png"
                     alt="Klima-Nrw-Angebote-Daikin"
                     title="Klima-Nrw-Angebote-Daikin"
                     width={600}
