@@ -69,7 +69,7 @@ export default function Kontakt() {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Gib deinen Namen ein"
+                placeholder="Name"
                 required
                 name="full-name"
                 className="px-4 py-2 w-full border-b border-blue-600 focus:outline-none focus:border-blue-800"
