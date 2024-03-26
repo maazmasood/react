@@ -17,8 +17,8 @@ export default function Kontakt() {
     const form = event.target;
     const formData = new FormData(form);
     const data = {
-      firstName: formData.get("first-name"),
-      lastName: formData.get("last-name"),
+      firstName: formData.get("full-name"),
+      lastName: " ",
       city: formData.get("city"),
       email: formData.get("email"),
       phoneNumber: formData.get("phone-number"),
@@ -38,128 +38,119 @@ export default function Kontakt() {
   }
 
   return (
-    <>      
-      <form
-        onSubmit={handleSubmit}
-        className="rounded-lg bg-grey mx-auto mt-6 p-8 "
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Kontaktieren Sie uns für eine persönliche Beratung rund um das Thema Klimaanlagen. Unsere Adresse lautet Huttropstraße 60, 45138 Essen (Germany). Tel: 02369 4049939, Email: Info@klimanrw.de"
+        />
+        <meta
+          name="keywords"
+          content="Kontakt, Klimaanlagen, Beratung, Adresse, Telefon, Email, Klimanrw, Essen, Deutschland"
+        />
+      </Head>
+      <div
+        className="contact-form rounded-lg justify-content align-center p-6"
+        id="s3"
+        style={{
+          boxShadow:
+            "0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.8)",
+        }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
-          <div>
-            <label
-              htmlFor="first-name"
-              className="block text-sm font-semibold leading-6 text-black"
-            >
-              Vorname
-            </label>
-            <div className="mt-2.5">
+        <p className="s3-text text-white">Kontaktiere uns - </p>
+        <h1 className="text-2xl font-bold mb-4 text-white ">
+          ERHALTEN EIN KOSTENLOSES ANGEBOT!
+        </h1>
+        <hr />
+        <br />
+
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4 grid grid-cols-2 gap-4 p-4">
+            <div className="relative">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
-                className="border-b focus:border-black border-black w-full py-2 px-3.5 text-black shadow-sm placeholder-black focus:ring-0 sm:text-sm sm:leading-6 bg-transparent"
+                placeholder="Gib deinen Namen ein"
+                required
+                name="full-name"
+                className="px-4 py-2 w-full border-b border-blue-600 focus:outline-none focus:border-blue-800"
               />
             </div>
-          </div>
-          <div>
-            <label
-              htmlFor="last-name"
-              className="block text-sm font-semibold leading-6 text-black"
-            >
-              Nachname
-            </label>
-            <div className="mt-2.5">
+            <div className="relative">
               <input
                 type="text"
-                name="last-name"
-                id="last-name"
-                autoComplete="family-name"
-                className="border-b w-full py-2 px-3.5 text-black shadow-sm placeholder-black focus:ring-0 sm:text-sm sm:leading-6 bg-transparent"
-              />
-            </div>
-          </div>
-          <div className="col-span-2">
-            <label
-              htmlFor="city"
-              className="block text-sm font-semibold leading-6 text-black"
-            >
-              Ort
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
+                placeholder="Stadt"
+                required
+                className="px-4 py-2 w-full"
                 name="city"
-                id="city"
-                autoComplete="City"
-                className="border-b w-full py-2 px-3.5 text-black shadow-sm placeholder-black focus:ring-0 sm:text-sm sm:leading-6 bg-transparent"
+                style={{
+                  borderBottom: "1px solid #2c4587",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                }}
               />
             </div>
           </div>
-          <div className="col-span-2">
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold leading-6 text-black"
-            >
-              Email
-            </label>
-            <div className="mt-2.5">
+          <div className="mb-4 grid grid-cols-2 gap-4 p-4">
+            <div className="relative">
               <input
                 type="email"
+                placeholder="Email"
                 name="email"
-                id="email"
-                autoComplete="email"
-                className="border-b w-full py-2 px-3.5 text-black shadow-sm placeholder-black focus:ring-0 sm:text-sm sm:leading-6 bg-transparent"
+                required
+                className="px-4 py-2 w-full"
+                style={{
+                  borderBottom: "1px solid #2c4587",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                }}
               />
             </div>
-          </div>
-          <div className="col-span-2">
-            <label
-              htmlFor="phone-number"
-              className="block text-sm font-semibold leading-6 text-black"
-            >
-              Telefon
-            </label>
-            <div className="mt-2.5">
+            <div className="relative">
               <input
                 type="tel"
+                placeholder="Telefonnummer"
+                required
                 name="phone-number"
-                id="phone-number"
-                autoComplete="tel"
-                className="border-b w-full py-2 px-3.5 text-black shadow-sm placeholder-black focus:ring-0 sm:text-sm sm:leading-6 bg-transparent"
+                className="px-4 py-2 w-full"
+                style={{
+                  borderBottom: "1px solid #2c4587",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                }}
               />
             </div>
           </div>
-          <div className="col-span-2">
-            <label
-              htmlFor="message"
-              className="block text-sm font-semibold leading-6 text-black"
+          <div className="mb-4 p-4">
+            <textarea
+              placeholder="Wie können wir Ihnen helfen ?"
+              required
+              className="px-4 py-2 w-full"
+              name="message"
+              style={{
+                borderBottom: "1px solid #2c4587",
+                borderTop: "none",
+                borderLeft: "none",
+                borderRight: "none",
+              }}
+            ></textarea>
+          </div>
+          <div className="mt-8 flex justify-start">
+            <button
+              type="submit"
+              id="s3-text"
+              className=" mt-3 ml-3  px-4 py-2 rounded-lg bg-white"
             >
-              Nachricht
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                className="w-full rounded-md border-b py-2 px-3.5 text-black shadow-sm placeholder-black focus:ring-0 sm:text-sm sm:leading-6 bg-transparent"
-                defaultValue={""}
-              />
-            </div>
+              Senden
+            </button>
+            {successMessage && (
+              <p className="text-white ml-8 mt-4">{successMessage}</p>
+            )}
           </div>
-        </div>
-        <div className="mt-8 flex justify-end">
-          {successMessage && (
-            <p className="text-green-600 mr-4 mt-2">{successMessage}</p>
-          )}
-          <button
-            type="submit"
-            id="s3"
-            className="rounded-md text-white px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-          >
-            Senden
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </>
   );
 }
