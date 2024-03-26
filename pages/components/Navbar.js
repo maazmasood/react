@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react";
 import { Dialog } from "@headlessui/react";
-import {
-  Bars3Icon,
-  DevicePhoneMobileIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, PhoneIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 const navigation = [
-  //  { name: "Klimaanlagen", href: "/klimaanlagen" },
-  //{ name: "Wärmepumpen", href: "/Waermepumpen" },
   { name: "Service", href: "/Service" },
   { name: "Über Uns", href: "/Ueber-uns" },
   { name: "Galerie", href: "/Galerie" },
@@ -50,13 +44,13 @@ export default function Navbar() {
   }, [router]);
   return (
     <div>
-      <div className="absolute inset-x-0 top-0 z-50">
-        <div className="mx-auto max-w-7xl">
+      <div className="absolute inset-x-0 top-0 z-50 ">
+        <div className="mx-auto max-w-7xl ">
           <div className="px-6 pt-6 lg:max-w-7xl lg:pl-8 lg:pr-0">
             <nav
               className="flex items-center justify-between"
               aria-label="Global"
-              style={{ padding: "0px 25px 25px 25px" }} // Increased padding
+              style={{ padding: "0px 25px 10px 25px" }} // Increased padding
             >
               <Link href="/" className="-m-1 p-1">
                 <span className="sr-only">KlimaNRW</span>
@@ -78,12 +72,12 @@ export default function Navbar() {
                 <Bars3Icon className="h-8 w-8" aria-hidden="true" />{" "}
                 {/* Increased icon size */}
               </button>
-              <div className="hidden lg:ml-8 lg:flex lg:gap-x-6">
+              <div className="hidden lg:flex lg:gap-x-6">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-xl font-semibold leading-6 text-black" // Increased text size
+                    className="text-xl font-extrabold leading-6 text-black" // Increased text size
                   >
                     {item.name}
                   </Link>
@@ -91,18 +85,13 @@ export default function Navbar() {
               </div>
               <div className="hidden lg:block lg:justify-end">
                 <a
+                  id="s3"
                   href="tel:023694049939"
                   title="Klima-Nrw-Telefon"
                   className="lg:relative lg:inline-flex items-center p-4 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  <DevicePhoneMobileIcon
-                    className="h-8 w-8" // Increased icon size
-                    aria-hidden="true"
-                  />
-                  <span className="sr-only">Notifications</span>
-                  <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-white rounded-full -top-1 -right-1 dark:border-gray-900">
-                    1
-                  </div>
+                  <PhoneIcon className="h-6 w-6 s3" />
+                  <span className="hidden lg:inline ml-2">Telefon</span>
                 </a>
               </div>
             </nav>
