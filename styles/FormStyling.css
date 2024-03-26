@@ -42,13 +42,21 @@
 
 /* Updated styles for Form 4 and Form 5 */
 .text-container textarea {
-  width: 400px; /* Fixed width for all forms */
+  width: 400px; /* Fixed width for larger screens */
   padding: 10px;
   margin-top: 10px;
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+
+/* Media query for screens smaller than 640px (typical mobile devices) */
+@media (max-width: 640px) {
+  .text-container textarea {
+    width: 100%; /* Change width to 80% for mobile devices */
+  }
+}
+
 
 
 
