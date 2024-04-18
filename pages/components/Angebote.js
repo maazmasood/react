@@ -172,6 +172,12 @@ export default function Angebote() {
     // Add more images as needed
   ];
 
+  const gtag_report_conversion = () => {
+    window.gtag("event", "conversion", {
+      send_to: "AW-308056398/5rQ0CJygoJsZEM6i8pIB",
+    });
+  };
+
   return (
     <>
       <Head>
@@ -193,13 +199,14 @@ export default function Angebote() {
       >
         <div className="lg:pr-4">
           <div className="flex justify-center items-center w-full h-1/2 px-8">
-            <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl w-full h-full">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-center text-gray-800 flashing-text">
+            <div className="p-8 bg-white rounded-lg shadow-lg max-w-2xl w-full h-full">
+              <h1 className="text-3xl md:text-3xl lg:text-4xl font-extrabold leading-tight text-center text-gray-800 flashing-text">
                 Erhalten Sie bis zum 30. April exklusive Winterangebote!
               </h1>
               <center>
-                <p className="mt-4  text-lg leading-relaxed text-gray-700">
-                  Nutzen Sie unsere exklusiven Winterangebote jetzt!
+                <p className="mt-4  text-m leading-relaxed text-gray-700">
+                  Schauen Sie sich unten die Sale-Artikel an. Oder erhalten Sie
+                  ein individuelles Rabattangebot
                 </p>
               </center>
               <div className="flex justify-center mt-4">
@@ -264,60 +271,13 @@ export default function Angebote() {
                   </div>
                 </div>
 
-                <div className="mt-6">
-                  <button
-                    id="s3"
-                    className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                    onClick={toggleContent1Visibility}
-                  >
-                    {isContent1Visible ? <span>-</span> : <span>+</span>}{" "}
-                    <span className="ml-2">
-                      {isContent1Visible
-                        ? "Details ausblenden"
-                        : "Zeige Details"}
-                    </span>
-                  </button>
-
-                  {isContent1Visible && (
-                    <>
-                      <p className="mt-4 text-left text-gray-600 md:text-sm">
-                        Kühlen im Sommer, heizen an kälteren Tagen und
-                        gleichzeitig die Luft filtern: Diese und viele weitere
-                        Vorteile ziehen mit einer Split-Klimaanlage von
-                        Mitsubishi Electric in Ihr Haus oder Ihre Wohnung ein.
-                        Lernen Sie unsere große Auswahl an eleganten und
-                        energieeffizienten Klimaanlagen kennen. Für die Planung
-                        und Installation der Klimageräte stehen Ihnen unsere
-                        Kälte-Klima Fachpartner beratend zur Seite.
-                      </p>
-
-                      <div className="mt-4">
-                        <h4 className="text-xs font-semibold leading-6 text-blue-600">
-                          Vorteile
-                        </h4>
-                        <ul className="mt-2 grid grid-cols-1 gap-2 text-sm text-gray-600">
-                          {includedFeaturesMitsubishi.map((feature, index) => (
-                            <li
-                              key={index}
-                              className="flex items-center gap-x-2"
-                            >
-                              <CheckIcon className="w-4 h-4 text-blue-600" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  )}
-
-                  <Link
-                    id="s3"
-                    href="/planer?product=Split Klimaanlage Mitsubishi"
-                    className="block w-full px-4 py-2 mt-4 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                  >
-                    <p className="text-white">jetzt sichern</p>
-                  </Link>
-                </div>
+                <Link
+                  id="s3"
+                  href="/product?id=1"
+                  className="block w-full px-4 py-2 mt-5 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
+                >
+                  <p className="text-white">jetzt sichern</p>
+                </Link>
               </div>
             </div>
             {/* Product 2 */}
@@ -363,66 +323,13 @@ export default function Angebote() {
                   </div>
                 </div>
 
-                <div className="mt-6">
-                  <button
-                    id="s3"
-                    className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                    onClick={toggleContent2Visibility}
-                  >
-                    {isContent2Visible ? <span>-</span> : <span>+</span>}{" "}
-                    <span className="ml-2">
-                      {isContent2Visible
-                        ? "Details ausblenden"
-                        : "Zeige Details"}
-                    </span>
-                  </button>
-
-                  {isContent2Visible && (
-                    <>
-                      <p className="mt-4 text-left text-gray-600 md:text-sm">
-                        Die Etherea-Klimaanlage kombiniert herausragende
-                        Energieeffizienz mit Komfort und gesunder Luft dank der
-                        nanoe™ X-Technologie und Super Quiet-Technologie, die
-                        nur 19 dB(A) erreicht. Die Klimaanlage bietet eine
-                        Internetsteuerung über die Panasonic Comfort Cloud und
-                        ist mit Sprachsteuerung kompatibel. Die Super
-                        Quiet-Technologie gewährleistet eine besonders leise
-                        Betriebsweise, während der Infrarot-Steuerung Sky
-                        Controller eine bequeme Bedienung ermöglicht. Aerowings
-                        ermöglichen die Kontrolle des Luftstroms, was zu einer
-                        schnelleren Erreichung der gewünschten Temperatur führt,
-                        und die Mild Dry Cooling-Funktion verhindert einen
-                        schnellen Anstieg der Raumfeuchtigkeit. Optional ist
-                        eine kabelgebundene Steuerung erhältlich.
-                      </p>
-
-                      <div className="mt-4">
-                        <h4 className="text-xs font-semibold leading-6 text-blue-600">
-                          Vorteile
-                        </h4>
-                        <ul className="mt-2 grid grid-cols-1 gap-2 text-xs text-gray-600">
-                          {includedFeaturesEtherea.map((feature, index) => (
-                            <li
-                              key={index}
-                              className="flex items-center gap-x-2"
-                            >
-                              <CheckIcon className="w-4 h-4 text-blue-600" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  )}
-
-                  <Link
-                    id="s3"
-                    href="/planer?product=Etherea - stilvoll mit herausragenden Funktionen"
-                    className="block w-full px-4 py-2 mt-4 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                  >
-                    <p className="text-white">jetzt sichern</p>
-                  </Link>
-                </div>
+                <Link
+                  id="s3"
+                  href="/product?id=2"
+                  className="block w-full px-4 py-2 mt-4 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
+                >
+                  <p className="text-white">jetzt sichern</p>
+                </Link>
               </div>
             </div>
             {/* Product 3 */}
@@ -467,68 +374,13 @@ export default function Angebote() {
                   </div>
                 </div>
 
-                <div className="mt-6">
-                  <button
-                    id="s3"
-                    className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                    onClick={toggleContent3Visibility}
-                  >
-                    {isContent3Visible ? <span>-</span> : <span>+</span>}{" "}
-                    <span className="ml-2">
-                      {isContent3Visible
-                        ? "Details ausblenden"
-                        : "Zeige Details"}
-                    </span>
-                  </button>
-
-                  {isContent3Visible && (
-                    <>
-                      <p className="mt-4 text-left text-gray-600 md:text-sm">
-                        Die Klimaanlage verfügt über einen fortschrittlichen
-                        3D-Luftstrommechanismus für eine effiziente
-                        Luftzirkulation in großen Räumen, ergänzt durch die
-                        Flexibilität, bis zu drei unabhängige Innengeräte
-                        anzuschließen. Sein kompaktes Wanddesign ist sowohl
-                        stilvoll als auch praktisch, ideal für Renovierungen und
-                        begrenzte Platzverhältnisse. Durch den Einsatz des
-                        umweltfreundlichen Kältemittels R-32 reduziert das
-                        System die Umweltbelastung um 68 % und sorgt
-                        gleichzeitig für sofortige Energieeinsparungen.
-                        Ausgestattet mit fortschrittlichen Allergenfiltern
-                        arbeitet es geräuschlos, reinigt die Luft und bietet
-                        Komfort. Mit beeindruckenden saisonalen Effizienzwerten
-                        und der Kompatibilität mit Sprachassistenten stellt
-                        dieses System einen Gipfel an Komfort und Nachhaltigkeit
-                        in der modernen Klimatisierung dar.
-                      </p>
-
-                      <div className="mt-4">
-                        <h4 className="text-xs font-semibold leading-6 text-blue-600">
-                          Vorteile
-                        </h4>
-                        <ul className="mt-2 grid grid-cols-1 gap-2 text-xs text-gray-600">
-                          {includedFeaturesDaikin.map((feature, index) => (
-                            <li
-                              key={index}
-                              className="flex items-center gap-x-2"
-                            >
-                              <CheckIcon className="w-4 h-4 text-blue-600" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  )}
-
-                  <Link
-                    id="s3"
-                    href="/planer?product=Effizientes 3D-Luftstrom-Klimagerät von Daikin"
-                    className="block w-full px-4 py-2 mt-4 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                  >
-                    <p className="text-white">jetzt sichern</p>
-                  </Link>
-                </div>
+                <Link
+                  id="s3"
+                  href="/product?id=3"
+                  className="block w-full px-4 py-2 mt-4 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
+                >
+                  <p className="text-white">jetzt sichern</p>
+                </Link>
               </div>
             </div>
             {/* Product 4 */}
@@ -573,63 +425,13 @@ export default function Angebote() {
                   </div>
                 </div>
 
-                <div className="mt-6">
-                  <button
-                    id="s3"
-                    className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                    onClick={toggleContent4Visibility}
-                  >
-                    {isContent4Visible ? <span>-</span> : <span>+</span>}{" "}
-                    <span className="ml-2">
-                      {isContent4Visible
-                        ? "Details ausblenden"
-                        : "Zeige Details"}
-                    </span>
-                  </button>
-
-                  {isContent4Visible && (
-                    <>
-                      <p className="mt-4 text-left text-gray-600 md:text-sm">
-                        Im Vergleich zu Durchlauferhitzern, Boilern oder
-                        Kombithermen verbraucht eine Brauchwasserwärmepumpe
-                        weniger Energie. Sie nutzt zu zwei Dritteln
-                        Umgebungswärme und benötigt lediglich ein Drittel Strom.
-                        Zudem benötigt Sie keine fossilen Brennstoffe. Die
-                        Anschaffung einer Brauchwasserwärmepumpe spart also
-                        Energie und Kosten und schont gleichzeitig die Umwelt.
-                        Besitzer oder Planer einer Solaranlage sollten die
-                        Nutzung einer Brauchwasserwärmepumpe in Erwägung ziehen.
-                      </p>
-
-                      <div className="mt-4">
-                        <h4 className="text-xs font-semibold leading-6 text-blue-600">
-                          Vorteile
-                        </h4>
-                        <ul className="mt-2 grid grid-cols-1 gap-2 text-xs text-gray-600">
-                          {includedFeaturesBrauchwasserpumpe.map(
-                            (feature, index) => (
-                              <li
-                                key={index}
-                                className="flex items-center gap-x-2"
-                              >
-                                <CheckIcon className="w-4 h-4 text-blue-600" />
-                                <span>{feature}</span>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </div>
-                    </>
-                  )}
-
-                  <Link
-                    id="s3"
-                    href="/planer?product=Brauchwasserpumpe"
-                    className="block w-full px-4 py-2 mt-4 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
-                  >
-                    <p className="text-white">jetzt sichern</p>
-                  </Link>
-                </div>
+                <Link
+                  id="s3"
+                  href="/product?id=4"
+                  className="block w-full px-4 py-2 mt-4 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-500 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
+                >
+                  <p className="text-white">jetzt sichern</p>
+                </Link>
               </div>
             </div>
           </div>
@@ -680,7 +482,7 @@ export default function Angebote() {
 
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-5">
         {/* First Section (20% width) */}
-        <div className="relative flex items-center justify-center px-12 py-6 pt-36 pb-20 sm:pt-32 lg:static lg:py-60 lg:px-8 hidden md:block">
+        <div className="relative flex items-center justify-center px-12 py-6 pt-36 pb-20 sm:pt-32 lg:static  lg:px-8 hidden md:block">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg ">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Senden Sie uns!
@@ -955,12 +757,12 @@ export default function Angebote() {
       </section>
 
       <section id="s3" className="section flex flex-col items-center md:hidden">
-        <div className="lg:pr-4 w-full lg:w-auto mt-8 lg:mt-0">
-          <div className="flex justify-center items-center w-full px-4 lg:px-0">
-            <div className=" rounded-lg shadow-lg w-full max-w-md">
-              <div className="flex justify-center mt-4">
-                <MainForm />
-              </div>
+        <div
+          className="w-full block md:hidden z-60 flex flex-col" // Added flex-col class
+        >
+          <div className="rounded-lg shadow-lg max-w-3xl w-full">
+            <div className="flex justify-center p-4">
+              <MainForm />
             </div>
           </div>
         </div>
@@ -990,7 +792,7 @@ export default function Angebote() {
                 title="Klima-Nrw-Telefon"
                 className="hover:text-gray-900 p-4"
               >
-                <span>
+                <span onClick={gtag_report_conversion}>
                   {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1065,7 +867,7 @@ export default function Angebote() {
             </div>
           </div>
           <div className="lg:ml-28 ">
-            <div className="flex justify-center items-center w-90  px-8">
+            <div className="flex justify-center items-center w-100  px-8">
               <div
                 className="m-6 rounded-lg shadow-lg max-w-3xl w-full"
                 id="s3"
