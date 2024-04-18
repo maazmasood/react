@@ -11,6 +11,12 @@ import { PhoneIcon } from "@heroicons/react/24/outline";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
+  const gtag_report_conversion = () => {
+    window.gtag("event", "conversion", {
+      send_to: "AW-308056398/5rQ0CJygoJsZEM6i8pIB",
+    });
+  };
+
   return (
     <div>
       <Head>
@@ -34,7 +40,8 @@ export default function App({ Component, pageProps }) {
         href="tel:023694049939"
         title="Klima-Nrw-Telefon"
         id="s3"
-        className="lg:hidden fixed bottom-6 right-4 z-50 inline-flex items-center p-3 text-sm font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300  dark:focus:ring-blue-800"
+        onClick={gtag_report_conversion}
+        className="lg:hidden fixed bottom-6 right-4 z-50 inline-flex items-center p-3 text-sm font-medium text-center text-white rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       >
         <PhoneIcon className="h-7 w-6" aria-hidden="true" />
       </a>

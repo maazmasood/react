@@ -55,10 +55,10 @@ export default function Kontakt() {
       </Head>
       <div className="relative isolate bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-          <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:py-48 lg:px-8">
+          <div className="relative px-12 pt-36 pb-20 sm:pt-32 lg:static lg:py-60 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2"></div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              <div className="absolute inset-y-0  left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2"></div>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 ">
                 Schreiben Sie uns!
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -157,9 +157,9 @@ export default function Kontakt() {
                   <div className="mt-2.5">
                     <input
                       type="text"
-                      name="last-name"
-                      id="last-name"
-                      autoComplete="family-name"
+                      name="city"
+                      id="city"
+                      autoComplete="City"
                       className="border-b block w-full border-0 py-2 px-3.5 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                     />
                   </div>
