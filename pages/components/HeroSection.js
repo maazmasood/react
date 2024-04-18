@@ -31,15 +31,7 @@ export default function HeroSection() {
     <div>
       <div className="relative flex">
         <div className="bg-gray-50 absolute lg:inset-y-0 lg:right-0 top-0 h-full w-full main_screen bg-[#DEE2EC]">
-          <Image
-            className="object-cover lg:object-right aspect-auto h-full  lg:h-full lg:w-full z-10"
-            src="/Klima-Nrw-Home-Background.webp"
-            alt="Klima-Nrw-Home-Background"
-            title="Klima-Nrw-Home-Background"
-            width={1900}
-            height={1100}
-            style={{ height: "100%" }}
-          />
+         
         </div>
 
         <div className="mx-auto max-w-7xl flex justify-end items-center md:mt-0">
