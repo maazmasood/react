@@ -2,38 +2,102 @@
   {
     "id": 1,
     "name": "Panasonic Etherea - Stilvoll mit herausragenden Funktionen",
-    "image": ["ac.png", "ac3.png", "ac5.png"],
-    "category": "Premium",
+    "image": ["1.jpeg" , "2.jpeg", "3.jpeg"],
+    "category": "Starter",
     "brand": "Panasonic",
     "room": "1 room",
-    "wifi": "inkl. WiFi",
-    "price": 2199,
-    "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+    "wifi": "Yes",
+    "price": 99.99,
+
+
+    "features" : [
+      "Energieeffizienz A+++",
+      "besonders energieeffizient",
+      "modernes Design",
+      "kühlen, heizen und entfeuchten",
+      "flüsterleiser Betrieb",
+      "keine Zugerscheinungen",
+      "reine Luft",
+      "smart vernetzbar",
+      "hygienisch"
+    ],
+
+
+    "description": "Kühlen im Sommer, heizen an kälteren Tagen und gleichzeitig die Luft filtern: Diese und viele weitere Vorteile ziehen mit einer Split-Klimaanlage von Mitsubishi Electric in Ihr Haus oder Ihre Wohnung ein. Lernen Sie unsere große Auswahl an eleganten und energieeffizienten Klimaanlagen kennen. Für die Planung und Installation der Klimageräte stehen Ihnen unsere Kälte-Klima Fachpartner beratend zur Seite."
   },
   {
     "id": 2,
-    "name": "Mitsubishi Electric MSZ-HR25VF - Schlicht und Modern",
-    "image": ["ac3.png", "ac.png", "ac5.png"],
-    "category": "Exklusiv",
-    "brand": "Mitsubishi",
-    "room": "2 room",
-    "wifi": "Optional WiFi",
-    "price": 1599.99,
-    "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+    "name": "Diakin - Stilvoll mit herausragenden Funktionen",
+    "image": ["1.jpeg" , "2.jpeg", "3.jpeg"],
+    "category": "Premium",
+    "brand": "diakin",
+    "room": "1 room",
+    "wifi": "Yes",
+    "price": 99.99,
 
+
+    "features" : [
+      "Energieeffizienz A+++",
+      "besonders energieeffizient",
+      "modernes Design",
+      "kühlen, heizen und entfeuchten",
+      "flüsterleiser Betrieb",
+      "keine Zugerscheinungen",
+      "reine Luft",
+      "smart vernetzbar",
+      "hygienisch"
+    ],
+
+
+    "description": "Kühlen im Sommer, heizen an kälteren Tagen und gleichzeitig die Luft filtern: Diese und viele weitere Vorteile ziehen mit einer Split-Klimaanlage von Mitsubishi Electric in Ihr Haus oder Ihre Wohnung ein. Lernen Sie unsere große Auswahl an eleganten und energieeffizienten Klimaanlagen kennen. Für die Planung und Installation der Klimageräte stehen Ihnen unsere Kälte-Klima Fachpartner beratend zur Seite."
   },
   {
     "id": 3,
-    "name": "LG Standard Plus - Modernes Design",
-    "image": ["ac5.png", "ac3.png", "ac.png"],
-    "category": "Normal",
-    "brand": "LG",
+    "name": "Panasonic Etherea - Stilvoll mit herausragenden Funktionen",
+    "image": ["g3.webp", "g4.webp"],
+    "category": "Premium",
+    "brand": "Samsung",
     "room": "3 room",
-    "wifi": "inkl. WiFi",
-    "price": 1799,
-    "description": "Energieeffizienz A+++ <br>  besonders energieeffizient <br> modernes design<br> Kühlen, Heizen und Entfeuchten<br> flüster Betrieb<br> nanoe™ X Filtertechnologi<br> Fortgeschrittene Inverter-Technologie"
+    "wifi": "Yes",
+    "price": 399.99,
+    "features" : [
+      "Energieeffizienz A+++",
+      "besonders energieeffizient",
+      "modernes Design",
+      "kühlen, heizen und entfeuchten",
+      "flüsterleiser Betrieb",
+      "keine Zugerscheinungen",
+      "reine Luft",
+      "smart vernetzbar",
+      "hygienisch"
+    ],
 
+
+    "description": "Kühlen im Sommer, heizen an kälteren Tagen und gleichzeitig die Luft filtern: Diese und viele weitere Vorteile ziehen mit einer Split-Klimaanlage von Mitsubishi Electric in Ihr Haus oder Ihre Wohnung ein. Lernen Sie unsere große Auswahl an eleganten und energieeffizienten Klimaanlagen kennen. Für die Planung und Installation der Klimageräte stehen Ihnen unsere Kälte-Klima Fachpartner beratend zur Seite."
+  },
+  {
+    "id": 4,
+    "name": "Panasonic Etherea - Stilvoll mit herausragenden Funktionen",
+    "image": ["g2.webp", "g3.webp"],
+    "category": "Exklusiv",
+    "brand": "Dikin",
+    "room": "4 room",
+    "wifi": "No",
+    "price": 499.99,
+    "features" : [
+      "Energieeffizienz A+++",
+      "besonders energieeffizient",
+      "modernes Design",
+      "kühlen, heizen und entfeuchten",
+      "flüsterleiser Betrieb",
+      "keine Zugerscheinungen",
+      "reine Luft",
+      "smart vernetzbar",
+      "hygienisch"
+    ],
+
+
+    "description": "Kühlen im Sommer, heizen an kälteren Tagen und gleichzeitig die Luft filtern: Diese und viele weitere Vorteile ziehen mit einer Split-Klimaanlage von Mitsubishi Electric in Ihr Haus oder Ihre Wohnung ein. Lernen Sie unsere große Auswahl an eleganten und energieeffizienten Klimaanlagen kennen. Für die Planung und Installation der Klimageräte stehen Ihnen unsere Kälte-Klima Fachpartner beratend zur Seite."
   }
-
 
 ]
