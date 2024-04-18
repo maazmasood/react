@@ -2,17 +2,16 @@
 import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(
-  "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"
+  "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"
 );
 
 export default async (req, res) => {
   const {
+    pname,
     Answer_1,
     Answer_2,
     Answer_3,
-    lenght,
     firstName,
-    lastName,
     email,
     phoneNumber,
     message,
@@ -24,11 +23,11 @@ export default async (req, res) => {
     `<th style="padding: 8px; text-align: left;">Field</th>`,
     `<th style="padding: 8px; text-align: left;">Value</th>`,
     `</tr>`,
-    `<tr><td>Answer 1</td><td>${Answer_1}</td></tr>`,
-    `<tr><td>Answer 2</td><td>${Answer_2}</td></tr>`,
-    `<tr><td>Answer 3</td><td>${Answer_3}</td></tr>`,
-    `<tr><td>Length</td><td>${lenght}</td></tr>`,
-    `<tr><td>Name</td><td>${firstName} ${lastName}</td></tr>`,
+    `<tr><td>Ausgewähltes Produkt : </td><td>${pname}</td></tr>`,
+    `<tr><td>Räume : </td><td>${Answer_1}</td></tr>`,
+    `<tr><td>Größe : </td><td>${Answer_2}</td></tr>`,
+    `<tr><td>Innengerät : </td><td>${Answer_3}</td></tr>`,
+    `<tr><td>Name</td><td>${firstName}</td></tr>`,
     `<tr><td>Email</td><td>${email}</td></tr>`,
     `<tr><td>Telefon</td><td>${phoneNumber}</td></tr>`,
     `<tr><td>Nachricht</td><td>${message}</td></tr>`,
@@ -39,18 +38,24 @@ export default async (req, res) => {
   const htmlContent = content;
 
   const mail = {
-    to: "maazmasood001@gmail.com", // replace with your email
+    to: "maazmasood65@gmail.com",
     from: "Klimanrw@gmail.com", // replace with your domain email
     subject: "Neue Nachricht aus Kontaktform Klimanrw",
     text: textContent,
     html: htmlContent,
   };
 
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const mail2 = {
+    to: "maazmasood001@gmail.com",
+    from: "Klimanrw@gmail.com", // replace with your domain email
+    subject: "Neue Nachricht aus Kontaktform Klimanrw",
+    text: textContent,
+    html: htmlContent,
+  };
 
-  await sleep(5000);
   try {
     // await sgMail.send(mail);
+    //await sgMail.send(mail2);
     res.status(200).send("Email sent successfully");
   } catch (error) {
     console.error("Error sending email:", error.message);

@@ -2,7 +2,7 @@
 import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(
-  "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"
+  "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"
 );
 
 export default async (req, res) => {
@@ -23,7 +23,15 @@ export default async (req, res) => {
     .join("");
 
   const mail = {
-    to: "Info@klimanrw.de", // replace with your email
+    to: "maazmasood001@gmail.com", // replace with your email
+    from: "Klimanrw@gmail.com", // replace with your domain email
+    subject: "Neue Nachricht aus Kontaktform Klimanrw",
+    text: textContent,
+    html: htmlContent,
+  };
+
+  const mail2 = {
+    to: "maazmasood65@gmail.com",
     from: "Klimanrw@gmail.com", // replace with your domain email
     subject: "Neue Nachricht aus Kontaktform Klimanrw",
     text: textContent,
@@ -32,6 +40,7 @@ export default async (req, res) => {
 
   try {
     await sgMail.send(mail);
+    await sgMail.send(mail2);
     res.status(200).send("Email sent successfully");
   } catch (error) {
     console.error("Error sending email:", error);
