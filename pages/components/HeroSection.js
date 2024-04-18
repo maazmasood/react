@@ -30,9 +30,7 @@ export default function HeroSection() {
   return (
     <div>
       <div className="relative flex">
-        <div className="bg-gray-50 absolute lg:inset-y-0 lg:right-0 top-0 h-full w-full main_screen bg-[#DEE2EC]">
-         
-        </div>
+        <div className="bg-gray-50 absolute lg:inset-y-0 lg:right-0 top-0 h-full w-full main_screen bg-[#DEE2EC]"></div>
 
         <div className="mx-auto max-w-7xl flex justify-end items-center md:mt-0">
           <div className="md:w-1/2 w-full p-2 ">

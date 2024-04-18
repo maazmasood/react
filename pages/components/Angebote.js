@@ -679,14 +679,17 @@ export default function Angebote() {
           <img
             src="Klima-Nrw-vfl.webp"
             alt="Your Image"
-            className="h-full w-full object-cover p-4"
+            className="h-full w-full object-cover p-4 md:p-0 "
           />
         </div>
 
         <div className="w-full p-4 md:p-2 md:w-1/2 flex justify-center items-center rounded-lg ">
           <div className="w-full max-w-lg">
             <div className="overflow-hidden mb-4 md:block hidden">
-              <h1 className="font-bold text-2xl text-blue-500 uppercase tracking-wider">
+              <h1
+                className="font-bold text-2xl  uppercase tracking-wider"
+                id="s3-text"
+              >
                 Antworten auf Ihre HVAC-Fragen
               </h1>
               <div className="w-full border-b-2 border-blue-500"></div>
@@ -712,46 +715,200 @@ export default function Angebote() {
         </div>
       </div>
 
-      <section id="s3" class="py-12 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl md:text-4xl font-bold text-center text-white mb-8 md:mb-0">
-          Entdecken Sie, was unsere Kunden sagen
-        </h2>
-        <div class="max-w-7xl mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <p class="text-m md:text-lg text-gray-800 mb-6">
-                "Hervorragende Auswahl und schnelle Lieferung! Dieses
-                Unternehmen bietet eine beeindruckende Auswahl an Klimaanlagen,
-                die den Bedürfnissen verschiedener Kunden gerecht."
+      <section id="s3" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8 md:mb-12">
+            Entdecken Sie, was unsere Kunden auf Google Maps sagen
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <div className="flex-shrink-0">
+                  <Image
+                    className="h-12 w-12 rounded-full"
+                    src="/customer1.jpg"
+                    alt="Customer 1"
+                    width={48}
+                    height={48}
+                  />
+                </div>
+                <div className="ml-4">
+                  <p className="text-gray-900 font-semibold">
+                    Geschäftsinhaber
+                  </p>
+                  <div className="flex items-center mt-1">
+                    <span className="text-xs md:text-sm text-gray-600">
+                      ★★★★★
+                    </span>
+                    <span className="ml-1 text-xs md:text-sm text-gray-500">
+                      vor 3 Tagen
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-800">
+                Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen
+                bietet eine beeindruckende Auswahl an Klimaanlagen, die den
+                Bedürfnissen verschiedener Kunden gerecht.
               </p>
-              <p class="text-gray-700 font-semibold">- Geschäftsinhaber</p>
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <p class="text-m md:text-m text-gray-800 mb-6">
-                "Top-Qualität und exzellenter Service! Die Klimaanlagen dieses
-                Unternehmens sind von höchster Qualität. Die Installation
-                verlief reibungslos, und das Personal war äußerst kompetent."
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <div className="flex-shrink-0">
+                  <Image
+                    className="h-12 w-12 rounded-full"
+                    src="/customer1.jpg"
+                    alt="Customer 1"
+                    width={48}
+                    height={48}
+                  />
+                </div>
+                <div className="ml-4">
+                  <p className="text-gray-900 font-semibold">
+                    Geschäftsinhaber
+                  </p>
+                  <div className="flex items-center mt-1">
+                    <span className="text-xs md:text-sm text-gray-600">
+                      ★★★★★
+                    </span>
+                    <span className="ml-1 text-xs md:text-sm text-gray-500">
+                      vor 3 Tagen
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-800">
+                Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen
+                bietet eine beeindruckende Auswahl an Klimaanlagen, die den
+                Bedürfnissen verschiedener Kunden gerecht.
               </p>
-              <p class="text-gray-700 font-semibold">- Ladenbesitzer</p>
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <p class="text-m md:text-m text-gray-800 mb-6">
-                "Sehr zufrieden mit dem Kauf! Die Klimaanlagen, die ich bei
-                diesem Unternehmen erworben habe, funktionieren einwandfrei. Die
-                Beratung war professionell, und der Kundenservice war sehr
-                hilfsbereit.."
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <div className="flex-shrink-0">
+                  <Image
+                    className="h-12 w-12 rounded-full"
+                    src="/customer1.jpg"
+                    alt="Customer 1"
+                    width={48}
+                    height={48}
+                  />
+                </div>
+                <div className="ml-4">
+                  <p className="text-gray-900 font-semibold">
+                    Geschäftsinhaber
+                  </p>
+                  <div className="flex items-center mt-1">
+                    <span className="text-xs md:text-sm text-gray-600">
+                      ★★★★★
+                    </span>
+                    <span className="ml-1 text-xs md:text-sm text-gray-500">
+                      vor 3 Tagen
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-800">
+                Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen
+                bietet eine beeindruckende Auswahl an Klimaanlagen, die den
+                Bedürfnissen verschiedener Kunden gerecht.
               </p>
-              <p class="text-gray-700 font-semibold">- Hausbesitzer</p>
             </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <p class="text-m md:text-m text-gray-800 mb-6">
-                "Das Unternehmen bietet eine beeindruckende Auswahl an
-                Klimaanlagen, die den Bedürfnissen verschiedener Kunden gerecht
-                werden. Die Lieferung erfolgte schnell und die
-                Auswahlmöglichkeiten waren hervorragend!"
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <div className="flex-shrink-0">
+                  <Image
+                    className="h-12 w-12 rounded-full"
+                    src="/customer1.jpg"
+                    alt="Customer 1"
+                    width={48}
+                    height={48}
+                  />
+                </div>
+                <div className="ml-4">
+                  <p className="text-gray-900 font-semibold">
+                    Geschäftsinhaber
+                  </p>
+                  <div className="flex items-center mt-1">
+                    <span className="text-xs md:text-sm text-gray-600">
+                      ★★★★★
+                    </span>
+                    <span className="ml-1 text-xs md:text-sm text-gray-500">
+                      vor 3 Tagen
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-800">
+                Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen
+                bietet eine beeindruckende Auswahl an Klimaanlagen, die den
+                Bedürfnissen verschiedener Kunden gerecht.
               </p>
-              <p class="text-gray-700 font-semibold">- Hausbesitzer</p>
             </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <div className="flex-shrink-0">
+                  <Image
+                    className="h-12 w-12 rounded-full"
+                    src="/customer1.jpg"
+                    alt="Customer 1"
+                    width={48}
+                    height={48}
+                  />
+                </div>
+                <div className="ml-4">
+                  <p className="text-gray-900 font-semibold">
+                    Geschäftsinhaber
+                  </p>
+                  <div className="flex items-center mt-1">
+                    <span className="text-xs md:text-sm text-gray-600">
+                      ★★★★★
+                    </span>
+                    <span className="ml-1 text-xs md:text-sm text-gray-500">
+                      vor 3 Tagen
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-800">
+                Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen
+                bietet eine beeindruckende Auswahl an Klimaanlagen, die den
+                Bedürfnissen verschiedener Kunden gerecht.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-center mb-4">
+                <div className="flex-shrink-0">
+                  <Image
+                    className="h-12 w-12 rounded-full"
+                    src="/customer1.jpg"
+                    alt="Customer 1"
+                    width={48}
+                    height={48}
+                  />
+                </div>
+                <div className="ml-4">
+                  <p className="text-gray-900 font-semibold">
+                    Geschäftsinhaber
+                  </p>
+                  <div className="flex items-center mt-1">
+                    <span className="text-xs md:text-sm text-gray-600">
+                      ★★★★★
+                    </span>
+                    <span className="ml-1 text-xs md:text-sm text-gray-500">
+                      vor 3 Tagen
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-800">
+                Hervorragende Auswahl und schnelle Lieferung! Dieses Unternehmen
+                bietet eine beeindruckende Auswahl an Klimaanlagen, die den
+                Bedürfnissen verschiedener Kunden gerecht.
+              </p>
+            </div>
+
+            {/* Repeat the above structure for each review */}
           </div>
         </div>
       </section>

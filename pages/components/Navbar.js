@@ -127,7 +127,7 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-2xl font-bold leading-8 text-[#2c4587]" // Increased text size
+                    className="text-xl font-extrabold leading-8 text-[#2c4587]" // Increased text size
                   >
                     {item.name}
                   </Link>
