@@ -81,7 +81,7 @@ margin-bottom: 120px;
 }
 
 #s3-text {
-  color: rgb(44, 69, 135); /* Adjusted to match the first color in the gradient */
+  color: #2c4587; /* Adjusted to match the first color in the gradient */
 }
 
 
@@ -368,13 +368,14 @@ figure.snip1157 .author h5 span {
 
 .box {
 	margin:30px;
-	background-color: #2563EB;
-  color: #fff;
+	background-color: #1895DE;
+  color: #fff !important;
 	border-radius: 20px;
 	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 	padding: 30px;
-	text-align: center;
+	text-align: left;
 	max-width: 500px;
+  
 }
 
 .box h2 {
@@ -402,6 +403,7 @@ figure.snip1157 .author h5 span {
 	height: 42px;
 	padding: 12px 25px;
 	width: 100%;
+  
 }
 
 .btn {

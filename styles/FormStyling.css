@@ -80,7 +80,6 @@
 
 /* Add the following styles for the submit button */
 .button-container button {
-  background-color: #1E40AF;
   color: white;
   padding: 10px 20px;
   font-size: 14pt;
@@ -105,13 +104,8 @@
   transition: opacity 0.3s ease;
 }
 
-.button-container button:hover {
-  background-color: #45a049;
-}
 
-.button-container button:hover:before {
-  opacity: 1;
-}
+
 
 .custom-form-container {
   max-width: 400px;
